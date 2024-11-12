@@ -17,22 +17,34 @@ interface GoogleTextSearchRequest {
   minRating: Number;
 }
 
+interface GoogleMapsPlace {
+  formattedAddress: string;
+  displayName: { text: string; languageCode: string };
+  location: { latitude: number; longitude: number };
+  rating: number;
+  types: string[];
+}
+
 // this class is for browser use, does not implement caching
 export class GoogleMapsBrowserApi extends AbstractMapApiProvider {
   provider(): MapProviderType {
     return MapProviderType.GOOGLE_BROWSER;
   }
 
-  async search(query: Query): Promise<SearchResult> {
+  // @override
+  async search(query: Query): Promise<SearchResult | undefined> {
     return await this.doSearch(query);
   }
 
-  async doSearch(query: Query): Promise<SearchResult> {
+  protected async doSearch(query: Query): Promise<SearchResult | undefined> {
     const apiResponse = await this.apiTextSearch(query);
+    if (!apiResponse) {
+      return;
+    }
     return this.processTextSearchResponse(apiResponse);
   }
 
-  async apiTextSearch(query: Query) {
+  async apiTextSearch(query: Query): Promise<GoogleMapsPlace | undefined> {
     const apiKey = import.meta.env.VITE_GOOGLE_API_KEY; // Replace with your actual key or environment variable setup
     const textQuery = query.queryString;
 
@@ -50,9 +62,15 @@ export class GoogleMapsBrowserApi extends AbstractMapApiProvider {
         },
       );
 
-      // console.log("google search response: ", response);
-      if (response.data && response.data.places) {
+      console.log("google search response: ", response);
+      if (
+        response.data &&
+        response.data.places &&
+        response.data.places.length
+      ) {
         return response.data.places[0];
+      } else {
+        return;
       }
     } catch (error) {
       console.error("Error fetching data from Google Places API: ", error);
@@ -60,7 +78,7 @@ export class GoogleMapsBrowserApi extends AbstractMapApiProvider {
     }
   }
 
-  private processTextSearchResponse(place: any): SearchResult {
+  private processTextSearchResponse(place: GoogleMapsPlace): SearchResult {
     const searchResult: SearchResult = {
       name: place.displayName,
       address: place.formattedAddress,

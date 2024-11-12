@@ -2,7 +2,7 @@ import fs from "fs";
 
 export interface MapApiProvider {
   provider(): MapProviderType;
-  search(query: Query): Promise<SearchResult>;
+  search(query: Query): Promise<SearchResult | undefined>;
   searchList(queries: Query[]): Promise<SearchResult[]>;
 }
 
@@ -33,7 +33,7 @@ export interface SearchResult {
 
 export abstract class AbstractMapApiProvider implements MapApiProvider {
   abstract provider(): MapProviderType;
-  abstract search(query: Query): Promise<SearchResult>;
+  abstract search(query: Query): Promise<SearchResult | undefined>;
 
   async searchList(queries: Query[]): Promise<SearchResult[]> {
     const promises = queries.map(async (query: Query) => {
@@ -45,6 +45,8 @@ export abstract class AbstractMapApiProvider implements MapApiProvider {
         throw e;
       }
     });
+
+    console.log("searchList: ", promises);
 
     const placesList = await Promise.all(promises);
     const placesClean = placesList.filter((loc) => loc !== undefined);
@@ -63,9 +65,9 @@ export abstract class AbstractServerMapApiProvider extends AbstractMapApiProvide
   }
 
   abstract provider(): MapProviderType;
-  abstract doSearch(query: Query): Promise<SearchResult>;
+  protected abstract doSearch(query: Query): Promise<SearchResult>;
 
-  async search(query: Query): Promise<SearchResult> {
+  async search(query: Query): Promise<SearchResult | undefined> {
     // if in cache, return result from cache
     // else
     //  - do search
@@ -104,7 +106,7 @@ export abstract class AbstractServerMapApiProvider extends AbstractMapApiProvide
   ) {
     try {
       const content = JSON.stringify(Object.fromEntries(data));
-      fs.writeFile(filePath, content, (err: any) => {
+      fs.writeFile(filePath, content, (err: NodeJS.ErrnoException | null) => {
         // In case of a error throw err.
         // console.log("writing to file:", content, data);
         if (err) throw err;

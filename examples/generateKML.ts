@@ -56,7 +56,7 @@ export function downloadKML(filename: string, kmlContent: string) {
   //   document.body.removeChild(a);
   //   URL.revokeObjectURL(url);
 
-  fs.writeFile(filename, kmlContent, (err: any) => {
+  fs.writeFile(filename, kmlContent, (err: NodeJS.ErrnoException | null) => {
     // In case of a error throw err.
     if (err) throw err;
   });

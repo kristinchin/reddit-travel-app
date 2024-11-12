@@ -60,6 +60,12 @@ const MapPanel: React.FC<MapPanelProps> = ({ PoIs }) => {
     lat: 42.3601,
     lng: -71.0589,
   }); // Default center
+  const [bounds, setBounds] = useState<google.maps.LatLngBoundsLiteral>({
+    east: -69,
+    north: 40,
+    west: -74,
+    south: 45,
+  });
 
   useEffect(() => {
     if (PoIs.length <= 0) {
@@ -74,20 +80,20 @@ const MapPanel: React.FC<MapPanelProps> = ({ PoIs }) => {
       bounds.extend({ lat, lng });
     });
 
+    console.log("PoIs: ", PoIs);
+
     // Calculate the center of the bounds to show most markers in view
     const center = bounds.getCenter();
-    console.log("setting center, bounds: ", bounds, center);
+    const boundsLiteral = {
+      north: bounds.getNorthEast().lat(),
+      east: bounds.getNorthEast().lng(),
+      south: bounds.getSouthWest().lat(),
+      west: bounds.getSouthWest().lng(),
+    };
+
+    setBounds(boundsLiteral);
     setCenter({ lat: center.lat(), lng: center.lng() }); // Update the state with the new center
-
-    // if (mapRef.current) {
-    //   mapRef.current.fitBounds(bounds); // Fit the map to the bounds
-    // }
   }, [PoIs]);
-
-  const handleMapMounted = (map: google.maps.Map) => {
-    mapRef.current = map; // Assign map instance to ref
-    console.log("Map loaded successfully.");
-  };
 
   return (
     <APIProvider
@@ -96,16 +102,18 @@ const MapPanel: React.FC<MapPanelProps> = ({ PoIs }) => {
     >
       <Map
         mapId="DEMO_MAP_ID"
-        defaultZoom={10}
-        defaultCenter={{ lat: 42.3601, lng: -71.0589 }}
+        // defaultZoom={10}
+        // onZoomChanged={}
+        // defaultCenter={{ lat: 42.3601, lng: -71.0589 }}
+        defaultBounds={bounds}
         center={center}
+        gestureHandling={"greedy"}
+        onBoundsChanged={(event: MapCameraChangedEvent) => {
+          setBounds(event.detail.bounds);
+        }}
         onCenterChanged={(event: MapCameraChangedEvent) => {
           setCenter(event.detail.center);
         }}
-        // onLoad={(map: google.maps.Map | null) => {
-        //   mapRef.current = map; // Store map instance in the ref
-        //   console.log("Maps API has loaded.");
-        // }}
         //   onCameraChanged={(ev: MapCameraChangedEvent) =>
         //     console.log(
         //       "camera changed:",

@@ -18,7 +18,7 @@ export abstract class AbstractExportFormat implements ExportFormat {
   // abstract downloadFromBrowser(filename: string, content: string): void;
 
   download(filename: string, content: string) {
-    fs.writeFile(filename, content, (err: any) => {
+    fs.writeFile(filename, content, (err: NodeJS.ErrnoException | null) => {
       // In case of a error throw err.
       if (err) throw err;
     });
