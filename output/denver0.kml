@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+      <Placemark>
+        <name>John Holly&apos;s Asian Bistro</name>
+        <description>Rating: 4.3; Address: 9232 Park Meadows Dr, Lone Tree, CO 80124, USA; Description: A well-recommended spot for decent food in the Centennial area. </description>
+        <Point>
+          <coordinates>-104.8816667,39.554166699999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hong Kong Station 港味小厨</name>
+        <description>Rating: 4.6; Address: 6878 S Yosemite St, Centennial, CO 80112, USA; Description: A popular choice for Chinese cuisine. </description>
+        <Point>
+          <coordinates>-104.886168,39.592493499999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>India&apos;s Kitchen II-Centennial</name>
+        <description>Rating: 4.5; Address: 8236 S Holly St, Centennial, CO 80122, USA; Description: Known for its delicious Indian dishes. </description>
+        <Point>
+          <coordinates>-104.92056369999999,39.5664916</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Udom Thai</name>
+        <description>Rating: 4.2; Address: 7412 S University Blvd, Centennial, CO 80122, USA; Description: A solid option for Thai food. </description>
+        <Point>
+          <coordinates>-104.9594176,39.5821257</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Reggae Pot Jamaican Grill</name>
+        <description>Rating: 4.6; Address: 7562 S University Blvd C, Centennial, CO 80122, USA; Description: A unique spot offering Caribbean flavors. </description>
+        <Point>
+          <coordinates>-104.9591179,39.5788711</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sunflower Asian Cafe</name>
+        <description>Rating: 4.3; Address: 91 W Mineral Ave #100, Littleton, CO 80120, USA; Description: A cafe known for its Asian cuisine. </description>
+        <Point>
+          <coordinates>-104.98910199999999,39.574615099999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hyderabad House Denver</name>
+        <description>Rating: 3.9; Address: 7605 E Arapahoe Rd, Centennial, CO 80112, USA; Description: A bakery offering traditional Norwegian treats. </description>
+        <Point>
+          <coordinates>-104.90088200000001,39.595408000000006</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pollo Lima</name>
+        <description>Rating: 4.6; Address: 9614 E Arapahoe Rd, Greenwood Village, CO 80112, USA; Description: Famous for its authentic Indian cuisine. </description>
+        <Point>
+          <coordinates>-104.87811389999999,39.594352799999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Haveli Indian Cuisine</name>
+        <description>Rating: 4.8; Address: 301 E County Line Rd, Littleton, CO 80122, USA; Description: A place known for its delicious chicken dishes. </description>
+        <Point>
+          <coordinates>-104.9840914,39.5664181</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Land of Sushi</name>
+        <description>Rating: 4.5; Address: 2412 E Arapahoe Rd, Centennial, CO 80122, USA; Description: Highly recommended for its Indian cuisine. </description>
+        <Point>
+          <coordinates>-104.95911889999999,39.5942266</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Castle Bar and Grill</name>
+        <description>Rating: 4.4; Address: 6657 S Broadway, Littleton, CO 80121, USA; Description: A great spot for wine lovers. </description>
+        <Point>
+          <coordinates>-104.988637,39.595794</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Blue Spruce Brewing Company - Littleton</name>
+        <description>Rating: 4.4; Address: 10577 Centennial Rd, Littleton, CO 80127, USA; Description: A fantastic sushi place that competes with the best. </description>
+        <Point>
+          <coordinates>-105.1179611,39.567855800000004</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chook</name>
+        <description>Rating: 4.3; Address: 2500 E Orchard Rd C, Greenwood Village, CO 80121, USA; Description: Known for its amazing burgers. </description>
+        <Point>
+          <coordinates>-104.95821529999999,39.6094747</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Postino Highlands Ranch</name>
+        <description>Rating: 4.6; Address: 1497 Park Central Dr, Highlands Ranch, CO 80129, USA; Description: Offers good appetizers and a great atmosphere. </description>
+        <Point>
+          <coordinates>-105.00624499999999,39.554787399999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Iwayama Sushi</name>
+        <description>Rating: 4.7; Address: 5500 S Simms St, Littleton, CO 80127, USA; Description: A popular spot for chicken dishes. </description>
+        <Point>
+          <coordinates>-105.1280087,39.6151123</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Via Baci</name>
+        <description>Rating: 4.4; Address: 10005 Commons St #200, Lone Tree, CO 80124, USA; Description: A great place for happy hour and decent food. </description>
+        <Point>
+          <coordinates>-104.88229199999999,39.534830899999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palenque Cocina Y Agaveria</name>
+        <description>Rating: 4.4; Address: 2609 Main St, Littleton, CO 80120, USA; Description: Offers both sushi and Hawaiian local style dishes. </description>
+        <Point>
+          <coordinates>-105.018621,39.614013</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Marco&apos;s Coal Fired | Ballpark</name>
+        <description>Rating: 4.5; Address: 2129 Larimer St, Denver, CO 80205, USA; Description: An independent spot loved for its Italian cuisine. </description>
+        <Point>
+          <coordinates>-104.99098529999999,39.7545109</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Seasons 52</name>
+        <description>Rating: 4.7; Address: 8325 Park Meadows Center Dr, Lone Tree, CO 80124, USA; Description: A well-loved spot in downtown Littleton. </description>
+        <Point>
+          <coordinates>-104.87453400000001,39.565391</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shanghai Kitchen</name>
+        <description>Rating: 4.2; Address: 4940 S Yosemite St E8, Greenwood Village, CO 80111, USA; Description: Highly recommended for its delicious pizza. </description>
+        <Point>
+          <coordinates>-104.88337059999999,39.624809299999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cafe India Denver</name>
+        <description>Rating: 4.5; Address: 6886 S Clinton St, Greenwood Village, CO 80112, USA; Description: A solid choice for a variety of dishes. </description>
+        <Point>
+          <coordinates>-104.8783033,39.5916934</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aung&apos;s Bangkok Cafe</name>
+        <description>Rating: 4.6; Address: 1225 E Hampden Ave, Englewood, CO 80113, USA; Description: Great for authentic Chinese food. </description>
+        <Point>
+          <coordinates>-104.97318020000002,39.6534228</coordinates>
+        </Point>
+      </Placemark>
+    </Document>
+  </kml>

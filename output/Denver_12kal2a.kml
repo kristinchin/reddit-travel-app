@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+      <Placemark>
+        <name>Banded Oak Brewing Company</name>
+        <description>Rating: 4.7; Address: 470 Broadway, Denver, CO 80203, USA; Description: A brewery with a back room that provides a great atmosphere for remote work. </description>
+        <Point>
+          <coordinates>-104.987014,39.7237661</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Improper City</name>
+        <description>Rating: 4.6; Address: 3201 Walnut St, Denver, CO 80205, USA; Description: An excellent spot for remote work with a vibrant environment. </description>
+        <Point>
+          <coordinates>-104.9791467,39.765277499999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Molecule Effect</name>
+        <description>Rating: 4.4; Address: 300 S Logan St Unit 101 2215 S, Denver, CO 80209, USA; Description: A coffee shop known for its friendly staff and great selection of coffee and boozy drinks. </description>
+        <Point>
+          <coordinates>-104.9823995,39.7109695</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Queen City Collective Coffee</name>
+        <description>Rating: 4.7; Address: 525 Santa Fe Dr, Denver, CO 80204, USA; Description: A quiet spot with outdoor seating, perfect for working or relaxing. </description>
+        <Point>
+          <coordinates>-104.9987228,39.7245183</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tattered Cover Book Store &amp; Café Colfax</name>
+        <description>Rating: 4.8; Address: 2526 E Colfax Ave, Denver, CO 80206, USA; Description: A meeting-friendly space with basements for seating, ideal for remote work. </description>
+        <Point>
+          <coordinates>-104.9566566,39.7400034</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Bardo Coffee House</name>
+        <description>Rating: 4.6; Address: 238 S Broadway, Denver, CO 80209, USA; Description: A popular spot for coffee and work, though it can get busy. </description>
+        <Point>
+          <coordinates>-104.98737650000001,39.7122449</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Glissade Coffee Company</name>
+        <description>Rating: 4.9; Address: 2520 Galena St Unit 3, Aurora, CO 80010, USA; Description: A recommended location for remote work. </description>
+        <Point>
+          <coordinates>-104.86902889999999,39.753433699999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ratio Beerworks - Overland</name>
+        <description>Rating: 4.6; Address: 2030 S Cherokee St, Denver, CO 80223, USA; Description: A brewery that also serves as a good spot for working. </description>
+        <Point>
+          <coordinates>-104.99077539999999,39.6797525</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Corvus Coffee Roasters</name>
+        <description>Rating: 4.7; Address: 1740 S Broadway, Denver, CO 80210, USA; Description: A coffee shop with outlets available, though it can be loud. </description>
+        <Point>
+          <coordinates>-104.987228,39.68495800000001</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Thump Coffee</name>
+        <description>Rating: 4.5; Address: 1201 E 13th Ave, Denver, CO 80218, USA; Description: Known for delicious coffee, but parking can be a challenge. </description>
+        <Point>
+          <coordinates>-104.9728066,39.7370362</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pablo&apos;s Coffee - East Colfax</name>
+        <description>Rating: 4.4; Address: 7701 E Colfax Ave, Denver, CO 80220, USA; Description: A small coffee shop with limited parking but a cozy atmosphere. </description>
+        <Point>
+          <coordinates>-104.8985076,39.740637899999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Endless Grind Coffee</name>
+        <description>Rating: 4.6; Address: 17070 E Quincy Ave, Aurora, CO 80015, USA; Description: A woman-owned coffee shop that is great for working and meetings. </description>
+        <Point>
+          <coordinates>-104.78855779999999,39.6375506</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>FlyteCo Brewing</name>
+        <description>Rating: 4.7; Address: 4499 W 38th Ave #101, Denver, CO 80212, USA; Description: A good spot for coffee and beer, though it has limited outlets. </description>
+        <Point>
+          <coordinates>-105.0448627,39.7696155</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trattoria Stella</name>
+        <description>Rating: 4.5; Address: 3201 E Colfax Ave, Denver, CO 80206, USA; Description: A coffee shop with outlets and wifi, perfect for remote work. </description>
+        <Point>
+          <coordinates>-104.9498469,39.7403729</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cafe Olé</name>
+        <description>Rating: 4.7; Address: 3225 S Wadsworth Blvd L, Lakewood, CO 80227, USA; Description: A cozy cafe that offers outlets and wifi for working. </description>
+        <Point>
+          <coordinates>-105.0834741,39.6576504</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hello Darling</name>
+        <description>Rating: 4.5; Address: 1610 Little Raven St #110, Denver, CO 80202, USA; Description: A newly opened space with green areas, ideal for working. </description>
+        <Point>
+          <coordinates>-105.0043013,39.7549482</coordinates>
+        </Point>
+      </Placemark>
+    </Document>
+  </kml>

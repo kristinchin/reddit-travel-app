@@ -1,0 +1,104 @@
+[
+    {
+      "name": "Fluid",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A spacious area with monitors ideal for working, known for its delicious breakfast burritos."
+    },
+    {
+      "name": "Improper city",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A large venue in RiNo with food trucks and coffee, perfect for working indoors or outdoors."
+    },
+    {
+      "name": "Sweet Bloom",
+      "city": "Westminster",
+      "state": "CO",
+      "description": "A coffee shop known for its quality brews, great for studying."
+    },
+    {
+      "name": "Sapor Coffee & Concepts",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A cozy coffee shop with a focus on quality and a comfortable atmosphere."
+    },
+    {
+      "name": "Crema Coffee House",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A popular coffee house with a welcoming vibe, ideal for working."
+    },
+    {
+      "name": "Queen city Roasters",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A local favorite for coffee lovers, offering a great space to work."
+    },
+    {
+      "name": "Huckleberry Roasters",
+      "city": "Denver",
+      "state": "CO",
+      "description": "Known for its excellent coffee and a great atmosphere for studying."
+    },
+    {
+      "name": "Bardo",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A coffee shop with a unique atmosphere, perfect for focused work despite its time limit on WiFi."
+    },
+    {
+      "name": "Honey Hill",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A go-to spot in Park Hill with plenty of space and a variety of food and coffee options."
+    },
+    {
+      "name": "Metropolis",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A cozy spot on South Broadway with a nice upstairs seating area for reading."
+    },
+    {
+      "name": "Hooked on Colfax",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A cozy basement coffee shop with good lighting for focusing."
+    },
+    {
+      "name": "Prodigy",
+      "city": "Denver",
+      "state": "CO",
+      "description": "Offers meeting rooms and a conducive environment for work."
+    },
+    {
+      "name": "Pablo’s Coffee",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A favorite spot on 6th Avenue for coffee lovers and remote workers."
+    },
+    {
+      "name": "Mango Tree",
+      "city": "Englewood",
+      "state": "CO",
+      "description": "A popular coffee shop where many people gather to work."
+    },
+    {
+      "name": "Lekker",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A coffee shop that supports rhino conservation with a portion of its profits."
+    },
+    {
+      "name": "Cafe Ole",
+      "city": "Lakewood",
+      "state": "CO",
+      "description": "A charming coffee shop in Lakewood, perfect for a casual work environment."
+    },
+    {
+      "name": "Vibe Coffee and Wine",
+      "city": "Denver",
+      "state": "CO",
+      "description": "A recent favorite for those looking to enjoy coffee and wine in a relaxed setting."
+    }
+  ]

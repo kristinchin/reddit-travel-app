@@ -1,4 +1,5 @@
-import { threadToKml } from "./redditToMapData";
+import { threadToLocations } from "./redditToMapData";
+import { MapProviderType } from "./MapProviders/MapApiProvider";
 
 // Usage example
 (async () => {
@@ -27,7 +28,7 @@ import { threadToKml } from "./redditToMapData";
     const threads = [url_7];
 
     threads.forEach((thread) => {
-      threadToKml(thread);
+      threadToLocations(thread, MapProviderType.GOOGLE_BROWSER);
     });
 
     // const comments = await fetchRedditThreadComments(url1);

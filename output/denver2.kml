@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+      <Placemark>
+        <name>Adelitas Cocina Y Cantina</name>
+        <description>Rating: 4.6; Address: 1294 S Broadway, Denver, CO 80210, USA; Description: A popular spot known for its top-notch Mole Oaxaca. </description>
+        <Point>
+          <coordinates>-104.9871874,39.6933128</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Brutal Poodle</name>
+        <description>Rating: 4.7; Address: 1967 S Broadway, Denver, CO 80210, USA; Description: A go-to bar with a cool vibe and a nice rooftop patio. </description>
+        <Point>
+          <coordinates>-104.9878461,39.6808802</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ZOMO</name>
+        <description>Rating: 4.8; Address: 3457 S Broadway, Englewood, CO 80113, USA; Description: A great restaurant located on Broadway. </description>
+        <Point>
+          <coordinates>-104.9877995,39.653909399999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>fellow traveler</name>
+        <description>Rating: 4.7; Address: 3487 S Broadway, Englewood, CO 80113, USA; Description: A recommended dining spot in the area. </description>
+        <Point>
+          <coordinates>-104.9878449,39.653410799999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aung&apos;s Bangkok Cafe</name>
+        <description>Rating: 4.6; Address: 1225 E Hampden Ave, Englewood, CO 80113, USA; Description: A well-liked cafe offering authentic Thai cuisine. </description>
+        <Point>
+          <coordinates>-104.97318020000002,39.6534228</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sukiya Ramen</name>
+        <description>Rating: 4.6; Address: 450 N Broadway, Denver, CO 80203, USA; Description: A popular ramen spot located on Pearl. </description>
+        <Point>
+          <coordinates>-104.98721429999999,39.723409100000005</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>La Forêt</name>
+        <description>Rating: 4.5; Address: 38 S Broadway, Denver, CO 80209, USA; Description: A great French restaurant where Beatrice and Woodsley used to be. </description>
+        <Point>
+          <coordinates>-104.987331,39.7158806</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hong Kong Station 港味小厨</name>
+        <description>Rating: 4.6; Address: 6878 S Yosemite St, Centennial, CO 80112, USA; Description: A restaurant known for its delicious Asian cuisine. </description>
+        <Point>
+          <coordinates>-104.886168,39.592493499999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bawarchi Biryani Point</name>
+        <description>Rating: 4.5; Address: 11001 E Arapahoe Pl b1, Centennial, CO 80112, USA; Description: A place famous for its flavorful biryani. </description>
+        <Point>
+          <coordinates>-104.8600579,39.594693199999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>La Chiva Colombian Cuisine</name>
+        <description>Rating: 4.3; Address: 1446 S Broadway, Denver, CO 80210, USA; Description: A Colombian restaurant offering authentic dishes. </description>
+        <Point>
+          <coordinates>-104.9871436,39.690344599999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>O Lien Kitchen</name>
+        <description>Rating: 4.5; Address: 781 S Federal Blvd B, Denver, CO 80219, USA; Description: A restaurant known for its diverse menu. </description>
+        <Point>
+          <coordinates>-105.02549409999999,39.702636000000005</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tikka &amp; Grill 2- 6Th Ave (Burger Masala)</name>
+        <description>Rating: 4.8; Address: 1120 E 6th Ave, Denver, CO 80218, USA; Description: An amazing spot for Indian cuisine. </description>
+        <Point>
+          <coordinates>-104.9733464,39.7254587</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BurnDown</name>
+        <description>Rating: 4.4; Address: 476 S Broadway, Denver, CO 80209, USA; Description: A restaurant with a rooftop patio, perfect for cocktails at sunset. </description>
+        <Point>
+          <coordinates>-104.9872152,39.7080432</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Esters Oneida Park</name>
+        <description>Rating: 4.6; Address: 2201 Oneida St, Denver, CO 80207, USA; Description: A popular dining spot with a great atmosphere. </description>
+        <Point>
+          <coordinates>-104.9085441,39.7500376</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jax Fish House &amp; Oyster Bar</name>
+        <description>Rating: 4.4; Address: 650 S Colorado Blvd, Glendale, CO 80246, USA; Description: A well-known oyster bar offering fresh seafood. </description>
+        <Point>
+          <coordinates>-104.9392457,39.705591299999995</coordinates>
+        </Point>
+      </Placemark>
+    </Document>
+  </kml>

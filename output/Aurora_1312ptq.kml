@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+        <Placemark>
+          <name>Stanley Marketplace</name>
+          <description>Rating: 4.6; Address: 2501 Dallas St, Aurora, CO 80010, USA; Description: A vibrant marketplace featuring a variety of shops, restaurants, and a coffee house. </description>
+          <Point>
+            <coordinates>-104.87692100000001,39.752862</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Logan House Coffee - Stanley Marketplace</name>
+          <description>Rating: 4; Address: 2501 Dallas St #112, Aurora, CO 80010, USA; Description: A cozy coffee shop located inside Stanley Marketplace, perfect for coffee lovers. </description>
+          <Point>
+            <coordinates>-104.877157,39.752829</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>FlyteCo Brewing</name>
+          <description>Rating: 4.7; Address: 4499 W 38th Ave #101, Denver, CO 80212, USA; Description: A quiet spot with plenty of seating, ideal for working or relaxing. </description>
+          <Point>
+            <coordinates>-105.0448627,39.7696155</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Somebody People</name>
+          <description>Rating: 4.7; Address: 1165 S Broadway #104, Denver, CO 80210, USA; Description: A unique eatery known for its creative menu and fun atmosphere. </description>
+          <Point>
+            <coordinates>-104.98767,39.6953301</coordinates>
+          </Point>
+        </Placemark>
+    </Document>
+  </kml>

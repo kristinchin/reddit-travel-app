@@ -1,0 +1,69 @@
+{
+  "Logan Coffee House Aurora, CO": {
+    "name": {
+      "text": "Logan House Coffee - Stanley Marketplace",
+      "languageCode": "en"
+    },
+    "address": "2501 Dallas St #112, Aurora, CO 80010, USA",
+    "location": { "latitude": 39.752829, "longitude": -104.877157 },
+    "rating": 4,
+    "types": [
+      "coffee_shop",
+      "cafe",
+      "store",
+      "food",
+      "wholesaler",
+      "point_of_interest",
+      "establishment"
+    ]
+  },
+  "Dip These Balls Denver, CO": {
+    "name": { "text": "Somebody People", "languageCode": "en" },
+    "address": "1165 S Broadway #104, Denver, CO 80210, USA",
+    "location": { "latitude": 39.6953301, "longitude": -104.98767 },
+    "rating": 4.7,
+    "types": [
+      "restaurant",
+      "liquor_store",
+      "market",
+      "bar",
+      "food",
+      "point_of_interest",
+      "store",
+      "establishment"
+    ]
+  },
+  "Stanley Marketplace Aurora, CO": {
+    "name": { "text": "Stanley Marketplace", "languageCode": "en" },
+    "address": "2501 Dallas St, Aurora, CO 80010, USA",
+    "location": { "latitude": 39.752862, "longitude": -104.87692100000001 },
+    "rating": 4.6,
+    "types": [
+      "market",
+      "shopping_mall",
+      "event_venue",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ]
+  },
+  "Flyte Co Denver, CO": {
+    "name": { "text": "FlyteCo Brewing", "languageCode": "en" },
+    "address": "4499 W 38th Ave #101, Denver, CO 80212, USA",
+    "location": { "latitude": 39.7696155, "longitude": -105.0448627 },
+    "rating": 4.7,
+    "types": [
+      "breakfast_restaurant",
+      "night_club",
+      "coffee_shop",
+      "bar",
+      "cafe",
+      "store",
+      "event_venue",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ]
+  }
+}

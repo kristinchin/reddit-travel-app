@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Butterfly Pavilion</name>
+      <description>Denver, Colorado</description>
+      <Point>
+        <coordinates>-105.0666409,39.8873108</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Air and Space Museum</name>
+      <description>Lowry, Denver, Colorado</description>
+      <Point>
+        <coordinates>-104.8973122,39.7212358</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cheyenne Mountain Zoo</name>
+      <description>Colorado Springs, Colorado</description>
+      <Point>
+        <coordinates>-104.8548688,38.7703872</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Golden Gate Canyon State Park</name>
+      <description>Golden, Colorado</description>
+      <Point>
+        <coordinates>-105.4167176,39.831978</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mount Falcon</name>
+      <description>Morrison, Colorado</description>
+      <Point>
+        <coordinates>-105.2437914,39.6567099</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

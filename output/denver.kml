@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+      <Placemark>
+        <name>Butterfly Pavilion</name>
+        <description>6252 W 104th Ave, Westminster, CO 80020, USA</description>
+        <Point>
+          <coordinates>-105.0666409,39.8873108</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Wings Over the Rockies Air & Space Museum</name>
+        <description>7711 E Academy Blvd, Denver, CO 80230, USA</description>
+        <Point>
+          <coordinates>-104.8955075,39.7208907</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cheyenne Mountain Zoo</name>
+        <description>4250 Cheyenne Mountain Zoo Rd, Colorado Springs, CO 80906, USA</description>
+        <Point>
+          <coordinates>-104.8548688,38.7703872</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Golden Gate Canyon State Park</name>
+        <description>92 Crawford Gulch Rd, Golden, CO 80403, USA</description>
+        <Point>
+          <coordinates>-105.4197987,39.8414296</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mount Falcon Park</name>
+        <description>Castle Trail, Morrison, CO 80465, USA</description>
+        <Point>
+          <coordinates>-105.2251088,39.6413501</coordinates>
+        </Point>
+      </Placemark>
+    </Document>
+  </kml>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+      <Placemark>
+        <name>LaTinto Café</name>
+        <description>Rating: 4.5; Address: 1417 S Broadway, Denver, CO 80210, USA; Description: A Colombian bakery that serves delicious baked goods as a side project for the La Chiva owners. </description>
+        <Point>
+          <coordinates>-104.9877971,39.6907959</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Osteria Alberico</name>
+        <description>Rating: 4.1; Address: 3455 S University Blvd, Englewood, CO 80113, USA; Description: A new Italian restaurant by The Frasca Group, set to open in Englewood next spring. </description>
+        <Point>
+          <coordinates>-104.95989449999999,39.6545335</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pretty Neat</name>
+        <description>Rating: 4.9; Address: 114 S Broadway, Denver, CO 80209, USA; Description: A newly opened speakeasy that offers a unique drinking experience. </description>
+        <Point>
+          <coordinates>-104.9871581,39.7144429</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Joy Hill Denver</name>
+        <description>Rating: 4.6; Address: 1229 S Broadway, Denver, CO 80210, USA; Description: A popular spot known for its great food and atmosphere. </description>
+        <Point>
+          <coordinates>-104.9878313,39.6941904</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GOLDEN FALAFEL</name>
+        <description>Rating: 4.9; Address: 6460 EAST YALE AVENUE SUITE G20A, Denver, CO 80222, USA; Description: A place specializing in delicious falafel dishes. </description>
+        <Point>
+          <coordinates>-104.9153202,39.6669148</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ZOMO</name>
+        <description>Rating: 4.8; Address: 3457 S Broadway, Englewood, CO 80113, USA; Description: A recommended eatery with a diverse menu. </description>
+        <Point>
+          <coordinates>-104.9877995,39.653909399999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>LingLon Dumpling House</name>
+        <description>Rating: 4.8; Address: 2456 S Colorado Blvd, Denver, CO 80222, USA; Description: A newer spot famous for its tasty dumplings. </description>
+        <Point>
+          <coordinates>-104.9393188,39.6715502</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dough Counter Pizza</name>
+        <description>Rating: 4.6; Address: 2466 S Colorado Blvd Unit 101, Denver, CO 80222, USA; Description: A fresh addition to the Denver food scene, known for its delicious offerings. </description>
+        <Point>
+          <coordinates>-104.9402059,39.671602799999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kokoro Restaurant</name>
+        <description>Rating: 4.6; Address: 2390 S Colorado Blvd, Denver, CO 80222, USA; Description: A restaurant that serves a variety of Japanese dishes. </description>
+        <Point>
+          <coordinates>-104.939886,39.673528</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Esters Oneida Park</name>
+        <description>Rating: 4.6; Address: 2201 Oneida St, Denver, CO 80207, USA; Description: The original location of a beloved local eatery. </description>
+        <Point>
+          <coordinates>-104.9085441,39.7500376</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chakas Mexican Restaurant</name>
+        <description>Rating: 4.5; Address: 6265 E Evans Ave, Denver, CO 80222, USA; Description: A recommended spot for great food. </description>
+        <Point>
+          <coordinates>-104.915509,39.678815</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tacos la comarca</name>
+        <description>Rating: 4.9; Address: 2120 S Holly St, Denver, CO 80222, USA; Description: A taco place known for its authentic flavors. </description>
+        <Point>
+          <coordinates>-104.9221403,39.6777</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Taste of India - DENVER</name>
+        <description>Rating: 4.3; Address: 901 S Oneida St #1707, Denver, CO 80224, USA; Description: A popular Indian restaurant located on Leetsdale. </description>
+        <Point>
+          <coordinates>-104.9085593,39.7001004</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Banzai Sushi</name>
+        <description>Rating: 4.6; Address: 6655 Leetsdale Dr, Denver, CO 80224, USA; Description: A sushi restaurant that is well-loved by locals. </description>
+        <Point>
+          <coordinates>-104.9110077,39.701965900000005</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Bronze Empire</name>
+        <description>Rating: 4.5; Address: 1591 S Colorado Blvd, Denver, CO 80222, USA; Description: A unique dining experience with a great menu. </description>
+        <Point>
+          <coordinates>-104.9419843,39.6877001</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Zaman Mediterranean Fresh</name>
+        <description>Rating: 4.8; Address: 282 S Logan St, Denver, CO 80209, USA; Description: Specializes in Manakeesh and offers a variety of Mediterranean dishes. </description>
+        <Point>
+          <coordinates>-104.98228569999999,39.7113708</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GARIBALDI MEXICAN RESTAURANT</name>
+        <description>Rating: 4.2; Address: 3471 N Salida St, Aurora, CO 80011, USA; Description: A hidden gem known for its amazing tacos. </description>
+        <Point>
+          <coordinates>-104.77631369999999,39.764224999999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Right Cream</name>
+        <description>Rating: 4.8; Address: 2423 S Downing St, Denver, CO 80210, USA; Description: A newer ice cream shop that also serves delicious cinnamon rolls. </description>
+        <Point>
+          <coordinates>-104.9736551,39.672709999999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Somebody People</name>
+        <description>Rating: 4.7; Address: 1165 S Broadway #104, Denver, CO 80210, USA; Description: A trendy spot with a great menu. </description>
+        <Point>
+          <coordinates>-104.98767,39.6953301</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aki Japanese Cuisine</name>
+        <description>Rating: 4.6; Address: 3484 S Broadway, Englewood, CO 80113, USA; Description: A recommended restaurant with a diverse menu. </description>
+        <Point>
+          <coordinates>-104.98719229999999,39.6534735</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>AJ&apos;s Pit Bar-B-Q</name>
+        <description>Rating: 4.5; Address: 2180 S Delaware St, Denver, CO 80223, USA; Description: A go-to spot for delicious barbecue. </description>
+        <Point>
+          <coordinates>-104.9920535,39.676982699999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>fellow traveler</name>
+        <description>Rating: 4.7; Address: 3487 S Broadway, Englewood, CO 80113, USA; Description: A popular restaurant known for its great cocktails and menu. </description>
+        <Point>
+          <coordinates>-104.9878449,39.653410799999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Music City Hot Chicken at TRVE Brewing</name>
+        <description>Rating: 4.6; Address: 227 Broadway #101, Denver, CO 80203, USA; Description: Offers a taste of Nashville's famous hot chicken. </description>
+        <Point>
+          <coordinates>-104.9877101,39.719919999999995</coordinates>
+        </Point>
+      </Placemark>
+    </Document>
+  </kml>

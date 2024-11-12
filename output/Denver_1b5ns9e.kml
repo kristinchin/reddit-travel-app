@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+      <Placemark>
+        <name>Fluid Coffee Bar</name>
+        <description>Rating: 4.5; Address: 501 E 19th Ave, Denver, CO 80203, USA; Description: A spacious area with monitors ideal for working, known for its delicious breakfast burritos. </description>
+        <Point>
+          <coordinates>-104.9808333,39.7463889</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Improper City</name>
+        <description>Rating: 4.6; Address: 3201 Walnut St, Denver, CO 80205, USA; Description: A large venue in RiNo with food trucks and coffee, perfect for working indoors or outdoors. </description>
+        <Point>
+          <coordinates>-104.9791467,39.765277499999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sweet Bloom Coffee Roasters</name>
+        <description>Rating: 4.6; Address: 8850 Westminster Blvd, Westminster, CO 80031, USA; Description: A coffee shop known for its quality brews, great for studying. </description>
+        <Point>
+          <coordinates>-105.0606818,39.857335299999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sapor Coffee &amp; Concepts</name>
+        <description>Rating: 4.8; Address: 2795 Speer Blvd UNIT 17, Denver, CO 80211, USA; Description: A cozy coffee shop with a focus on quality and a comfortable atmosphere. </description>
+        <Point>
+          <coordinates>-105.018048,39.756861099999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Crema Coffee House</name>
+        <description>Rating: 4.6; Address: 2862 Larimer St, Denver, CO 80205, USA; Description: A popular coffee house with a welcoming vibe, ideal for working. </description>
+        <Point>
+          <coordinates>-104.9817125,39.7611858</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Queen City Collective Coffee</name>
+        <description>Rating: 4.7; Address: 2962 Welton St, Denver, CO 80205, USA; Description: A local favorite for coffee lovers, offering a great space to work. </description>
+        <Point>
+          <coordinates>-104.9744025,39.7573538</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Huckleberry Roasters</name>
+        <description>Rating: 4.7; Address: 1406 Larimer St, Denver, CO 80202, USA; Description: Known for its excellent coffee and a great atmosphere for studying. </description>
+        <Point>
+          <coordinates>-104.999483,39.747436</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Bardo Coffee House</name>
+        <description>Rating: 4.6; Address: 238 S Broadway, Denver, CO 80209, USA; Description: A coffee shop with a unique atmosphere, perfect for focused work despite its time limit on WiFi. </description>
+        <Point>
+          <coordinates>-104.98737650000001,39.7122449</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Honey Hill Cafe</name>
+        <description>Rating: 4.5; Address: 4628 E 23rd Ave, Denver, CO 80207, USA; Description: A go-to spot in Park Hill with plenty of space and a variety of food and coffee options. </description>
+        <Point>
+          <coordinates>-104.93311320000001,39.7508948</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Metropolis Coffee</name>
+        <description>Rating: 4.6; Address: 1199 26th St, Denver, CO 80205, USA; Description: A cozy spot on South Broadway with a nice upstairs seating area for reading. </description>
+        <Point>
+          <coordinates>-104.98422319999999,39.7579086</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hooked on Colfax</name>
+        <description>Rating: 4.6; Address: 3213 E Colfax Ave, Denver, CO 80206, USA; Description: A cozy basement coffee shop with good lighting for focusing. </description>
+        <Point>
+          <coordinates>-104.9496564,39.7403403</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Prodigy Coffeehouse / 40th &amp; Colorado</name>
+        <description>Rating: 4.6; Address: 3801 E 40th Ave, Denver, CO 80205, USA; Description: Offers meeting rooms and a conducive environment for work. </description>
+        <Point>
+          <coordinates>-104.9420933,39.773162299999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pablo&apos;s Coffee - East Colfax</name>
+        <description>Rating: 4.4; Address: 7701 E Colfax Ave, Denver, CO 80220, USA; Description: A favorite spot on 6th Avenue for coffee lovers and remote workers. </description>
+        <Point>
+          <coordinates>-104.8985076,39.740637899999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mango Tree Coffee</name>
+        <description>Rating: 4.7; Address: 3498 S Broadway, Englewood, CO 80113, USA; Description: A popular coffee shop where many people gather to work. </description>
+        <Point>
+          <coordinates>-104.9873772,39.653300099999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lekker Coffee &amp; Watering Hole</name>
+        <description>Rating: 4.8; Address: 3460 Larimer St, Denver, CO 80205, USA; Description: A coffee shop that supports rhino conservation with a portion of its profits. </description>
+        <Point>
+          <coordinates>-104.9749064,39.766490399999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cafe Olé</name>
+        <description>Rating: 4.7; Address: 3225 S Wadsworth Blvd L, Lakewood, CO 80227, USA; Description: A charming coffee shop in Lakewood, perfect for a casual work environment. </description>
+        <Point>
+          <coordinates>-105.0834741,39.6576504</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vibe Coffee and Wine</name>
+        <description>Rating: 4.6; Address: 1490 Curtis Street, Denver, CO 80202, USA; Description: A recent favorite for those looking to enjoy coffee and wine in a relaxed setting. </description>
+        <Point>
+          <coordinates>-104.9958563,39.746003400000006</coordinates>
+        </Point>
+      </Placemark>
+    </Document>
+  </kml>

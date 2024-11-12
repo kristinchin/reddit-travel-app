@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>denver1.kml</name>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name><![CDATA[John Holly's Asian Bistro]]></name>
+      <description>Rating: 4.3; Address: 9232 Park Meadows Dr, Lone Tree, CO 80124, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.881667,39.554167,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[India's Kitchen II-Centennial]]></name>
+      <description>Rating: 4.5; Address: 8236 S Holly St, Centennial, CO 80122, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.920564,39.566492,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Udom Thai</name>
+      <description>Rating: 4.2; Address: 7412 S University Blvd, Centennial, CO 80122, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.959418,39.582126,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sunflower Asian Cafe</name>
+      <description>Rating: 4.3; Address: 91 W Mineral Ave #100, Littleton, CO 80120, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.989102,39.574615,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Hyderabad House Denver</name>
+      <description>Rating: 3.9; Address: 7605 E Arapahoe Rd, Centennial, CO 80112, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.900882,39.595408,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Haveli Indian Cuisine</name>
+      <description>Rating: 4.8; Address: 301 E County Line Rd, Littleton, CO 80122, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.984091,39.566418,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ZOMO</name>
+      <description>Rating: 4.8; Address: 3457 S Broadway, Englewood, CO 80113, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.9878,39.653909,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Los Dos Potrillos Mexican Restaurant - Littleton</name>
+      <description>Rating: 4.5; Address: 10065 W San Juan Way, Littleton, CO 80127, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -105.111506,39.563373,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Music Go Round</name>
+      <description>Rating: 4.5; Address: 8055 W Bowles Ave #2C, Littleton, CO 80123, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -105.087432,39.611154,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[INDIA'S Restaurant, Denver]]></name>
+      <description>Rating: 4.3; Address: 8921 E Hampden Ave, Denver, CO 80231, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.883261,39.653548,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Lucile's Creole Cafe]]></name>
+      <description>Rating: 4.6; Address: 2852 W Bowles Ave, Littleton, CO 80120, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -105.024541,39.612477,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Land of Sushi</name>
+      <description>Rating: 4.5; Address: 2412 E Arapahoe Rd, Centennial, CO 80122, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.959119,39.594227,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Haveli Indian Cuisine</name>
+      <description>Rating: 4.8; Address: 301 E County Line Rd, Littleton, CO 80122, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.984091,39.566418,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Blue Spruce Brewing Company - Littleton</name>
+      <description>Rating: 4.4; Address: 10577 Centennial Rd, Littleton, CO 80127, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -105.117961,39.567856,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>La Fogata - Quincy</name>
+      <description>Rating: 4.3; Address: 8090 E Quincy Ave, Denver, CO 80237, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.895364,39.63809,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>The Castle Bar and Grill</name>
+      <description>Rating: 4.4; Address: 6657 S Broadway, Littleton, CO 80121, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.988637,39.595794,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sushi Basho</name>
+      <description>Rating: 4.3; Address: 2700 W Bowles Ave, Littleton, CO 80120, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -105.020528,39.612773,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>fellow traveler</name>
+      <description>Rating: 4.7; Address: 3487 S Broadway, Englewood, CO 80113, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.987845,39.653411,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>The Whiskey Biscuit</name>
+      <description>Rating: 4.3; Address: 3299 S Broadway, Englewood, CO 80113, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.988036,39.656692,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Iwayama Sushi</name>
+      <description>Rating: 4.7; Address: 5500 S Simms St, Littleton, CO 80127, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -105.128009,39.615112,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Via Baci</name>
+      <description>Rating: 4.4; Address: 10005 Commons St #200, Lone Tree, CO 80124, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.882292,39.534831,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Haveli Indian Cuisine</name>
+      <description>Rating: 4.8; Address: 301 E County Line Rd, Littleton, CO 80122, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.984091,39.566418,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Undici Ristorante</name>
+      <description>Rating: 4.6; Address: 1200 E Hampden Ave, Englewood, CO 80113, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.973374,39.65296,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Marco's Coal Fired | Ballpark]]></name>
+      <description>Rating: 4.5; Address: 2129 Larimer St, Denver, CO 80205, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.990985,39.754511,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Seasons 52</name>
+      <description>Rating: 4.7; Address: 8325 Park Meadows Center Dr, Lone Tree, CO 80124, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.874534,39.565391,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[J. Alexander's Restaurant]]></name>
+      <description>Rating: 4.4; Address: 9709 E County Line Rd, Centennial, CO 80112, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.873602,39.568754,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Shanghai Kitchen</name>
+      <description>Rating: 4.2; Address: 4940 S Yosemite St E8, Greenwood Village, CO 80111, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.883371,39.624809,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cafe India Denver</name>
+      <description>Rating: 4.5; Address: 6886 S Clinton St, Greenwood Village, CO 80112, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.878303,39.591693,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Aung's Bangkok Cafe]]></name>
+      <description>Rating: 4.6; Address: 1225 E Hampden Ave, Englewood, CO 80113, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.97318,39.653423,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Hong Kong Station 港味小厨</name>
+      <description>Rating: 4.6; Address: 6878 S Yosemite St, Centennial, CO 80112, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.886168,39.592493,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[NoNo's Cafe]]></name>
+      <description>Rating: 4.5; Address: 3005 W County Line Rd, Littleton, CO 80129, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -105.026759,39.56658,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Highlands Indian Cuisine</name>
+      <description>Rating: 4.7; Address: 9344 Dorchester St Ste#101, Highlands Ranch, CO 80129, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.999507,39.547481,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Mariachi Loco Mexican Grill & Taqueria]]></name>
+      <description>Rating: 4; Address: 7824 Park Meadows Dr #300, Lone Tree, CO 80124, USA</description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <Point>
+        <coordinates>
+          -104.897974,39.56248,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Daves Hot Chicken</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -104.9877407,39.7149163,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

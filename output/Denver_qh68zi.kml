@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+      <Placemark>
+        <name>Stella&apos;s Coffee Haus</name>
+        <description>Rating: 4.6; Address: 1476 S Pearl St, Denver, CO 80210, USA; Description: A charming spot on historic South Pearl street, perfect for a cozy visit. </description>
+        <Point>
+          <coordinates>-104.98017379999999,39.6896783</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>St Mark&apos;s Coffee House</name>
+        <description>Rating: 4.4; Address: 2019 E 17th Ave, Denver, CO 80206, USA; Description: A great option with a unique vibe, known for its enjoyable atmosphere. </description>
+        <Point>
+          <coordinates>-104.9629343,39.7434563</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cabrón Carbón - Taquería &amp; Galería</name>
+        <description>Rating: 4.1; Address: 1043 N Broadway, Denver, CO 80203, USA; Description: A recommended location that fits the bill for a nice outing. </description>
+        <Point>
+          <coordinates>-104.9877226,39.7328995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Crowfoot Valley Coffee</name>
+        <description>Rating: 4.7; Address: 734 Wilcox St STE 102, Castle Rock, CO 80104, USA; Description: A late-night coffee spot with a cafe vibe that also serves alcohol. </description>
+        <Point>
+          <coordinates>-104.85959559999999,39.377893799999995</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trident Booksellers and Cafe</name>
+        <description>Rating: 4.7; Address: 940 Pearl St, Boulder, CO 80302, USA; Description: A cozy bookstore in Boulder, perfect for book lovers. </description>
+        <Point>
+          <coordinates>-105.28299179999999,40.0171546</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Weathervane Cafe</name>
+        <description>Rating: 4.8; Address: 1725 E 17th Ave, Denver, CO 80218, USA; Description: A delightful spot in Uptown known for its inviting atmosphere. </description>
+        <Point>
+          <coordinates>-104.9665234,39.7434368</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Steam Espresso Bar</name>
+        <description>Rating: 4.6; Address: 1801 S Pearl St, Denver, CO 80210, USA; Description: Offers amazing food and a great atmosphere, though it closes early. </description>
+        <Point>
+          <coordinates>-104.980791,39.683851</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Improper City</name>
+        <description>Rating: 4.6; Address: 3201 Walnut St, Denver, CO 80205, USA; Description: A popular cafe, especially the new location in Highland. </description>
+        <Point>
+          <coordinates>-104.9791467,39.765277499999996</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sputnik</name>
+        <description>Rating: 4.4; Address: 3 S Broadway, Denver, CO 80209, USA; Description: A wonderful workspace that is especially lively during weekdays. </description>
+        <Point>
+          <coordinates>-104.98775309999999,39.716402599999995</coordinates>
+        </Point>
+      </Placemark>
+    </Document>
+  </kml>
