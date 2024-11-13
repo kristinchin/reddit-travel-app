@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Button, TextField, Grid2 } from "@mui/material";
 import TestPanel from "./TestPanel";
+import PlacesList from "./PlacesList";
+import Location from "../../Location";
 
 interface SearchPanelProps {
   onSearch: (inputValue: string) => void; // Function to handle search with the input value
+  locations: Location[];
 }
 
-const SearchPanel: React.FC<SearchPanelProps> = ({ onSearch }) => {
+const SearchPanel: React.FC<SearchPanelProps> = ({ onSearch, locations }) => {
   var [inputValue, setInputValue] = useState<string>("");
 
   // Update state when input changes
@@ -46,6 +49,7 @@ const SearchPanel: React.FC<SearchPanelProps> = ({ onSearch }) => {
           </Button>
         </Grid2>
         <TestPanel onSearch={onSearch}></TestPanel>
+        <PlacesList locations={locations}></PlacesList>
       </Grid2>
     </div>
   );

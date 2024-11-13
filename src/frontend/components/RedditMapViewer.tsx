@@ -39,7 +39,7 @@ const MapViewer: React.FC = () => {
 
   return (
     <div className="container">
-      <SearchPanel onSearch={handleSearch} />
+      <SearchPanel locations={locations} onSearch={handleSearch} />
       <MapPanel PoIs={locations} />
     </div>
   );
