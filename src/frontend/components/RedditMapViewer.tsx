@@ -27,7 +27,7 @@ const MapViewer: React.FC = () => {
             MapProviderType.GOOGLE_BROWSER,
           );
           // Update state with fetched locations
-          console.log("locs: ", locs);
+          // console.log("locs: ", locs);
           setLocations(locs);
         } catch (error) {
           console.error("Failed to fetch locations:", error);

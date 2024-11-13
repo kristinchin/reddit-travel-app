@@ -8,6 +8,7 @@ import {
   MapCameraChangedEvent,
   InfoWindow,
   Pin,
+  useMap,
 } from "@vis.gl/react-google-maps";
 import Location from "../../Location";
 import { useEffect, useRef, useState } from "react";
@@ -54,18 +55,12 @@ interface MapPanelProps {
   PoIs: Location[]; // Function to handle search with the input value
 }
 
-const MapPanel: React.FC<MapPanelProps> = ({ PoIs }) => {
-  const mapRef = useRef<google.maps.Map | null>(null);
+const MapComponent: React.FC<MapPanelProps> = ({ PoIs }) => {
+  const map = useMap();
   const [center, setCenter] = useState<google.maps.LatLngLiteral>({
     lat: 42.3601,
     lng: -71.0589,
-  }); // Default center
-  const [bounds, setBounds] = useState<google.maps.LatLngBoundsLiteral>({
-    east: -69,
-    north: 40,
-    west: -74,
-    south: 45,
-  });
+  }); // Default center at boston
 
   useEffect(() => {
     if (PoIs.length <= 0) {
@@ -80,51 +75,67 @@ const MapPanel: React.FC<MapPanelProps> = ({ PoIs }) => {
       bounds.extend({ lat, lng });
     });
 
-    console.log("PoIs: ", PoIs);
+    // console.log("PoIs: ", PoIs);
 
     // Calculate the center of the bounds to show most markers in view
     const center = bounds.getCenter();
-    const boundsLiteral = {
-      north: bounds.getNorthEast().lat(),
-      east: bounds.getNorthEast().lng(),
-      south: bounds.getSouthWest().lat(),
-      west: bounds.getSouthWest().lng(),
-    };
+    // const boundsLiteral = {
+    //   north: bounds.getNorthEast().lat(),
+    //   east: bounds.getNorthEast().lng(),
+    //   south: bounds.getSouthWest().lat(),
+    //   west: bounds.getSouthWest().lng(),
+    // };
 
-    setBounds(boundsLiteral);
+    map?.fitBounds(bounds);
+
+    // setBounds(boundsLiteral);
     setCenter({ lat: center.lat(), lng: center.lng() }); // Update the state with the new center
   }, [PoIs]);
+
+  // useEffect(() => {
+  //   if (!map) return;
+
+  //   // do something with the map instance
+  // }, [map]);
+
+  return (
+    <>
+      <Map
+        /// <reference path="" />
+        mapId="DEMO_MAP_ID"
+        defaultZoom={13}
+        center={center}
+        gestureHandling={"greedy"}
+        // onBoundsChanged={(event: MapCameraChangedEvent) => {
+        //   setBounds(event.detail.bounds);
+        // }}
+        onCenterChanged={(event: MapCameraChangedEvent) => {
+          setCenter(event.detail.center);
+        }}
+        // onCameraChanged={(ev: MapCameraChangedEvent) =>
+        //   console.log(
+        //     "camera changed:",
+        //     ev.detail.center,
+        //     "zoom:",
+        //     ev.detail.zoom,
+        //   )
+        // }
+      >
+        <PoiMarkers pois={PoIs} />
+      </Map>
+    </>
+  );
+};
+
+const MapPanel: React.FC<MapPanelProps> = ({ PoIs }) => {
+  // const mapRef = useRef<google.maps.Map | null>(null);
 
   return (
     <APIProvider
       apiKey={import.meta.env.VITE_GOOGLE_API_KEY}
       onLoad={() => console.log("Maps API has loaded.")}
     >
-      <Map
-        mapId="DEMO_MAP_ID"
-        // defaultZoom={10}
-        // onZoomChanged={}
-        // defaultCenter={{ lat: 42.3601, lng: -71.0589 }}
-        defaultBounds={bounds}
-        center={center}
-        gestureHandling={"greedy"}
-        onBoundsChanged={(event: MapCameraChangedEvent) => {
-          setBounds(event.detail.bounds);
-        }}
-        onCenterChanged={(event: MapCameraChangedEvent) => {
-          setCenter(event.detail.center);
-        }}
-        //   onCameraChanged={(ev: MapCameraChangedEvent) =>
-        //     console.log(
-        //       "camera changed:",
-        //       ev.detail.center,
-        //       "zoom:",
-        //       ev.detail.zoom,
-        //     )
-        //   }
-      >
-        <PoiMarkers pois={PoIs} />
-      </Map>
+      <MapComponent PoIs={PoIs}></MapComponent>
     </APIProvider>
   );
 };
