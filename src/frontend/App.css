@@ -15,3 +15,24 @@
   width: 75%;
   position: relative;
 }
+
+.info-window-content {
+  padding: 0px; /* Adjust padding to reduce space */
+  margin: 0; /* Remove default margin */
+  max-width: 200px; /* Set a max width to prevent text from stretching */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.info-window-content h3 {
+  margin: 0 0 0px; /* Reduce space between title and text */
+  font-size: 16px;
+  color: #444;
+}
+
+.info-window-content p {
+  margin: 4px 0; /* Adjust margins for text sections */
+  line-height: 1.4; /* Control line spacing for readability */
+  color: #666;
+}

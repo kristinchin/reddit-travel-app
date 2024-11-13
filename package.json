@@ -28,9 +28,13 @@
     "vite": "^5.4.10"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@googlemaps/google-maps-services-js": "^3.4.0",
     "@googlemaps/js-api-loader": "^1.16.8",
     "@googlemaps/places": "^1.7.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vis.gl/react-google-maps": "^1.4.0",
