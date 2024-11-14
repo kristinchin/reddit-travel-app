@@ -28,9 +28,6 @@ const PlacesList: React.FC<PlacesListProps> = ({
   onLocationSelect,
 }) => {
   const [checked, setChecked] = useState<string[]>([]);
-  const [selectedLocation, setSelectedLocation] = useState<Location | null>(
-    null,
-  );
 
   const handleToggle = (value: string) => () => {
     const currentIndex = checked.indexOf(value);
@@ -50,15 +47,6 @@ const PlacesList: React.FC<PlacesListProps> = ({
   const handleListItemClick = (location: Location) => {
     onLocationSelect(location);
     console.log("item selected in PlacesList");
-  };
-  const closeInfoCard = () => {
-    setSelectedLocation(null);
-    onLocationSelect(location);
-    console.log("closing info card, setting selected to null: ", location);
-  };
-
-  const openMapsLink = () => {
-    console.log("google maps link");
   };
 
   return (
@@ -109,30 +97,6 @@ const PlacesList: React.FC<PlacesListProps> = ({
           );
         })}
       </List>
-
-      {selectedLocation && (
-        <Card sx={{ minWidth: 275 }}>
-          <CardHeader
-            action={
-              <IconButton onClick={closeInfoCard} size="small">
-                <Close></Close>
-              </IconButton>
-            }
-            title={selectedLocation.name.text}
-            subheader={selectedLocation.address}
-          ></CardHeader>
-          <CardContent>
-            <Typography variant="body2">
-              {selectedLocation.description}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button onClick={openMapsLink} size="small">
-              Open In Google Maps
-            </Button>
-          </CardActions>
-        </Card>
-      )}
     </>
   );
 };

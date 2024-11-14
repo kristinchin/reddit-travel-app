@@ -21,9 +21,13 @@ interface PlaceMarkersProps {
 }
 
 const PlaceMarkers: React.FC<PlaceMarkersProps> = ({ pois, selected }) => {
-  const [selectedPoi, setSelectedPoi] = useState<Location | null>(selected);
+  const [selectedPoi, setSelectedPoi] = useState<Location | null>(null);
 
-  useEffect(() => {}, [selected]);
+  useEffect(() => {
+    // setSelectedPoi(null);
+    setSelectedPoi(selected);
+  }, [selected]);
+
   if (!pois || pois.length === 0) {
     return null; // or display a message, e.g., <p>No locations available</p>
   }
@@ -46,7 +50,6 @@ const PlaceMarkers: React.FC<PlaceMarkersProps> = ({ pois, selected }) => {
 
       {/* Info window to show location details */}
       {selectedPoi && (
-        // <div className="info-window-content">
         <InfoWindow headerDisabled={true} position={selectedPoi.location}>
           <Card sx={{ maxWidth: 370 }}>
             <CardHeader
@@ -79,7 +82,6 @@ const PlaceMarkers: React.FC<PlaceMarkersProps> = ({ pois, selected }) => {
             </CardActions>
           </Card>
         </InfoWindow>
-        // </div>
       )}
     </>
   );

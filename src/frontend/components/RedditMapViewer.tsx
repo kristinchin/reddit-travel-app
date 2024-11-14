@@ -21,7 +21,7 @@ const MapViewer: React.FC = () => {
 
   const handleLocationSelect = (location: Location) => {
     setSelectedLocation(location);
-    console.log("setting selected in map viewer");
+    console.log("setting selected in map viewer to: ", location.name.text);
   };
 
   useEffect(() => {
@@ -51,7 +51,6 @@ const MapViewer: React.FC = () => {
         locations={locations}
         onSearch={handleSearch}
         onSelectedLocation={handleLocationSelect}
-        selectedLocation={selectedLocation}
       />
       <MapPanel selected={selectedLocation} PoIs={locations} />
     </div>

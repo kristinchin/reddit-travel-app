@@ -7,7 +7,6 @@ import Location from "../../Location";
 interface SearchPanelProps {
   onSearch: (inputValue: string) => void; // Function to handle search with the input value
   locations: Location[];
-  selectedLocation: Location | null;
   onSelectedLocation: Function;
 }
 
@@ -17,9 +16,6 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
   onSelectedLocation,
 }) => {
   var [inputValue, setInputValue] = useState<string>("");
-  const [selectedLocation, setSelectedLocation] = useState<Location | null>(
-    null,
-  );
 
   // Update state when input changes
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,8 +36,7 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
   };
 
   const handleLocationSelect = (location: Location) => {
-    setSelectedLocation(location);
-    onSelectedLocation(selectedLocation);
+    onSelectedLocation(location);
     console.log("setting selected in SearchPanel");
   };
 
@@ -51,7 +46,7 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
         <Grid2 size={9}>
           <TextField
             id="standard-basic"
-            label="Find some cool places"
+            label="Find your next destination"
             variant="filled"
             value={inputValue}
             onChange={handleInputChange}
