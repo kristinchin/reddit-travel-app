@@ -1,18 +1,40 @@
 import { AdvancedMarker, InfoWindow, Pin } from "@vis.gl/react-google-maps";
 import Location from "../../Location";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
-import { Card, CardContent, Typography, IconButton } from "@mui/material";
-// import CloseIcon from '@mui/icons-material/Close';
+import {
+  Card,
+  CardContent,
+  Typography,
+  IconButton,
+  CardActions,
+  CardHeader,
+  Button,
+  Rating,
+  Grid2,
+} from "@mui/material";
+import { Close } from "@mui/icons-material";
 
-const PlaceMarkers = (props: { pois: Location[] }) => {
-  const [selectedPoi, setSelectedPoi] = useState<Location | null>(null);
-  if (!props.pois || props.pois.length === 0) {
+interface PlaceMarkersProps {
+  pois: Location[];
+  selected: Location | null;
+}
+
+const PlaceMarkers: React.FC<PlaceMarkersProps> = ({ pois, selected }) => {
+  const [selectedPoi, setSelectedPoi] = useState<Location | null>(selected);
+
+  useEffect(() => {}, [selected]);
+  if (!pois || pois.length === 0) {
     return null; // or display a message, e.g., <p>No locations available</p>
   }
+
+  const openMapsLink = () => {
+    console.log("google maps link");
+  };
+
   return (
     <>
-      {props.pois.map((poi: Location, index) => (
+      {pois.map((poi: Location, index) => (
         <AdvancedMarker
           key={poi.name.text + index}
           position={poi.location}
@@ -25,14 +47,37 @@ const PlaceMarkers = (props: { pois: Location[] }) => {
       {/* Info window to show location details */}
       {selectedPoi && (
         // <div className="info-window-content">
-        <InfoWindow
-          position={selectedPoi.location}
-          onCloseClick={() => setSelectedPoi(null)} // Close the popup
-        >
-          <h3>{selectedPoi.name.text}</h3>
-          <p>{selectedPoi.address}</p>
-          <p>Rating: {selectedPoi.rating?.toString()}</p>
-          <p>{selectedPoi.description}</p>
+        <InfoWindow headerDisabled={true} position={selectedPoi.location}>
+          <Card sx={{ maxWidth: 370 }}>
+            <CardHeader
+              action={
+                <IconButton onClick={() => setSelectedPoi(null)} size="small">
+                  <Close></Close>
+                </IconButton>
+              }
+              title={selectedPoi.name.text}
+              subheader={
+                <>
+                  {selectedPoi.address}
+                  <Rating
+                    name="read-only"
+                    value={selectedPoi.rating as number}
+                    readOnly
+                    precision={0.1}
+                  />
+                  {selectedPoi.rating}
+                </>
+              }
+            ></CardHeader>
+            <CardContent>
+              <Typography variant="body2">{selectedPoi.description}</Typography>
+            </CardContent>
+            <CardActions>
+              <Button onClick={openMapsLink} size="small">
+                Open In Google Maps
+              </Button>
+            </CardActions>
+          </Card>
         </InfoWindow>
         // </div>
       )}

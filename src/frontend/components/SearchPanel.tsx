@@ -7,10 +7,19 @@ import Location from "../../Location";
 interface SearchPanelProps {
   onSearch: (inputValue: string) => void; // Function to handle search with the input value
   locations: Location[];
+  selectedLocation: Location | null;
+  onSelectedLocation: Function;
 }
 
-const SearchPanel: React.FC<SearchPanelProps> = ({ onSearch, locations }) => {
+const SearchPanel: React.FC<SearchPanelProps> = ({
+  onSearch,
+  locations,
+  onSelectedLocation,
+}) => {
   var [inputValue, setInputValue] = useState<string>("");
+  const [selectedLocation, setSelectedLocation] = useState<Location | null>(
+    null,
+  );
 
   // Update state when input changes
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,26 +39,39 @@ const SearchPanel: React.FC<SearchPanelProps> = ({ onSearch, locations }) => {
     onSearch(inputValue + ".json");
   };
 
+  const handleLocationSelect = (location: Location) => {
+    setSelectedLocation(location);
+    onSelectedLocation(selectedLocation);
+    console.log("setting selected in SearchPanel");
+  };
+
   return (
     <div className="search-panel">
-      <Grid2 container direction="column" spacing={2}>
-        <Grid2 container direction="row" spacing={2}>
+      <Grid2 container spacing={2}>
+        <Grid2 size={9}>
           <TextField
             id="standard-basic"
             label="Find some cool places"
-            variant="standard"
+            variant="filled"
             value={inputValue}
             onChange={handleInputChange}
             onKeyDown={handleKeyPress}
+            fullWidth={true}
             placeholder="Paste a reddit thread..."
           />
-          {/* <button>Search</button> */}
+        </Grid2>
+        <Grid2 size={3}>
           <Button variant="text" onClick={handleSearch}>
             Search
           </Button>
         </Grid2>
-        <TestPanel onSearch={onSearch}></TestPanel>
-        <PlacesList locations={locations}></PlacesList>
+        <Grid2 size={12} direction="column" container spacing={2}>
+          <TestPanel onSearch={onSearch}></TestPanel>
+          <PlacesList
+            onLocationSelect={handleLocationSelect}
+            locations={locations}
+          ></PlacesList>
+        </Grid2>
       </Grid2>
     </div>
   );

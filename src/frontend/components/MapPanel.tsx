@@ -10,8 +10,9 @@ import PlaceMarkers from "./PlaceMarkers";
 
 interface MapPanelProps {
   PoIs: Location[]; // Function to handle search with the input value
+  selected: Location | null;
 }
-const MapComponent: React.FC<MapPanelProps> = ({ PoIs }) => {
+const MapComponent: React.FC<MapPanelProps> = ({ PoIs, selected }) => {
   const map = useMap();
   // map?.setOptions(options: {ColorScheme: ColorScheme.FOLLOW})
   const [center, setCenter] = useState<google.maps.LatLngLiteral>({
@@ -51,19 +52,19 @@ const MapComponent: React.FC<MapPanelProps> = ({ PoIs }) => {
           setCenter(event.detail.center);
         }}
       >
-        <PlaceMarkers pois={PoIs} />
+        <PlaceMarkers selected={selected} pois={PoIs} />
       </Map>
     </>
   );
 };
 
-const MapPanel: React.FC<MapPanelProps> = ({ PoIs }) => {
+const MapPanel: React.FC<MapPanelProps> = ({ PoIs, selected }) => {
   return (
     <APIProvider
       apiKey={import.meta.env.VITE_GOOGLE_API_KEY}
       onLoad={() => console.log("Maps API has loaded.")}
     >
-      <MapComponent PoIs={PoIs}></MapComponent>
+      <MapComponent selected={selected} PoIs={PoIs}></MapComponent>
     </APIProvider>
   );
 };
