@@ -18,7 +18,11 @@ export function generateKML(data: Location[]): string {
       return `
       <Placemark>
         <name>${location.name.text}</name>
-        <description>Rating: ${location.rating}; Address: ${location.address}; Description: ${location.description} </description>
+        <description><b>Address:</b> ${location.address}
+          <br/><b>Rating:</b> ${location.rating}
+          <br/><b>Description:</b> ${location.description} 
+          <br/><a href="${location.googleMapsLinks?.placeUri}" target="_blank">View In Google Maps</a>
+        </description>
         <Point>
           <coordinates>${location.location.lng},${location.location.lat}</coordinates>
         </Point>
@@ -29,7 +33,9 @@ export function generateKML(data: Location[]): string {
   return `${kmlHeader}${kmlPlacemarks}${kmlFooter}`;
 }
 
-export function downloadKMLBrowser(filename: string, kmlContent: string) {
+export function downloadKMLBrowser(filename: string, data: Location[]) {
+  const kmlContent = generateKML(data);
+
   const blob = new Blob([kmlContent], {
     type: "application/vnd.google-earth.kml+xml",
   });
@@ -44,18 +50,6 @@ export function downloadKMLBrowser(filename: string, kmlContent: string) {
 }
 
 export function downloadKML(filename: string, kmlContent: string) {
-  //   const blob = new Blob([kmlContent], {
-  //     type: "application/vnd.google-earth.kml+xml",
-  //   });
-  //   const url = URL.createObjectURL(blob);
-  //   const a = document.createElement("a");
-  //   a.href = url;
-  //   a.download = filename;
-  //   document.body.appendChild(a);
-  //   a.click();
-  //   document.body.removeChild(a);
-  //   URL.revokeObjectURL(url);
-
   fs.writeFile(filename, kmlContent, (err: NodeJS.ErrnoException | null) => {
     // In case of a error throw err.
     if (err) throw err;
