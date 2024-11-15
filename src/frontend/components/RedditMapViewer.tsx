@@ -1,12 +1,10 @@
-// src/App.tsx
-import SearchPanel from "./SearchPanel";
-import MapPanel from "./MapPanel";
 import "../App.css";
-// import { threadToLocations } from "../../redditToMapData";
-import { threadToLocations } from "../../redditToMapData";
 import { useEffect, useState } from "react";
 import Location from "../../Location";
+import MapPanel from "./MapPanel";
 import { MapProviderType } from "../../MapProviders/MapApiProvider";
+import SearchPanel from "./SearchPanel";
+import { threadToLocations } from "../../redditToMapData";
 
 const MapViewer: React.FC = () => {
   const [locations, setLocations] = useState<Location[]>([]);

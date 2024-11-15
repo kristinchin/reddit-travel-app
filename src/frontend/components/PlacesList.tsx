@@ -65,7 +65,6 @@ const PlacesList: React.FC<PlacesListProps> = ({
               <ListItemIcon>
                 <IconButton
                   edge="end"
-                  aria-label="comments"
                   onClick={() => handleToggle(location.name.text)}
                 >
                   {checked.includes(location.name.text) ? (

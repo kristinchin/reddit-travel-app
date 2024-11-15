@@ -23,6 +23,13 @@ interface GoogleMapsPlace {
   location: { latitude: number; longitude: number };
   rating: number;
   types: string[];
+  googleMapsLinks: {
+    directionsUri: string;
+    photosUri: string;
+    placeUri: string;
+    reviewsUri: string;
+    writeAReviewUri: string;
+  };
 }
 
 // this class is for browser use, does not implement caching
@@ -45,7 +52,7 @@ export class GoogleMapsBrowserApi extends AbstractMapApiProvider {
   }
 
   async apiTextSearch(query: Query): Promise<GoogleMapsPlace | undefined> {
-    const apiKey = import.meta.env.VITE_GOOGLE_API_KEY; // Replace with your actual key or environment variable setup
+    const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
     const textQuery = query.queryString;
 
     try {
@@ -57,7 +64,7 @@ export class GoogleMapsBrowserApi extends AbstractMapApiProvider {
             "Content-Type": "application/json",
             "X-Goog-Api-Key": apiKey || "", // Fallback to empty string if apiKey is undefined
             "X-Goog-FieldMask":
-              "places.displayName,places.formattedAddress,places.location,places.types,places.rating",
+              "places.displayName,places.formattedAddress,places.location,places.types,places.rating,places.googleMapsLinks",
           },
         },
       );
@@ -89,6 +96,7 @@ export class GoogleMapsBrowserApi extends AbstractMapApiProvider {
       // icon: topPlace.iconMaskBaseUri,
       rating: place.rating, // advanced
       types: place.types,
+      googleMapsLinks: place.googleMapsLinks,
     };
     return searchResult;
   }
@@ -143,7 +151,7 @@ export class GoogleMapsApi extends AbstractServerMapApiProvider {
       });
 
       if (response?.[0]?.places?.[0]) {
-        return response;
+        return response[0].places[0];
       }
       return;
     } catch (e) {
@@ -152,8 +160,7 @@ export class GoogleMapsApi extends AbstractServerMapApiProvider {
     }
   }
 
-  private processTextSearchResponse(response: any): SearchResult {
-    const topPlace = response[0].places[0];
+  private processTextSearchResponse(topPlace: GoogleMapsPlace): SearchResult {
     const place: SearchResult = {
       name: topPlace.displayName,
       address: topPlace.formattedAddress,
@@ -164,6 +171,7 @@ export class GoogleMapsApi extends AbstractServerMapApiProvider {
       // icon: topPlace.iconMaskBaseUri,
       rating: topPlace.rating, // advanced
       types: topPlace.types,
+      googleMapsLinks: topPlace.googleMapsLinks,
     };
     return place;
   }

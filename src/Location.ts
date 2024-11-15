@@ -6,6 +6,13 @@ interface Location {
   types: Array<string> | undefined;
   rating: Number | undefined;
   description: string | undefined;
+  googleMapsLinks?: {
+    directionsUri?: string;
+    photosUri?: string;
+    placeUri: string;
+    reviewsUri?: string;
+    writeAReviewUri?: string;
+  };
 }
 
 export default Location;

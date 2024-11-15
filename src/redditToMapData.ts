@@ -50,6 +50,7 @@ export async function threadToLocations(
       location: sr.location,
       types: sr.types,
       rating: sr.rating,
+      googleMapsLinks: sr.googleMapsLinks,
     };
     locations.push(loc);
   });

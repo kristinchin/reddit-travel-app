@@ -6,7 +6,7 @@ import Location from "../../Location";
 import { Send } from "@mui/icons-material";
 
 interface SearchPanelProps {
-  onSearch: (inputValue: string) => void; // Function to handle search with the input value
+  onSearch: (inputValue: string) => void;
   locations: Location[];
   onSelectedLocation: Function;
   toggleLocation: Function;

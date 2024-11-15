@@ -16,12 +16,6 @@ export interface Query {
   queryString: string;
 }
 
-// export class Query implements Query {
-//   equals(other: Query) {
-//     return other.queryString.toLowerCase == this.queryString.toLowerCase;
-//   }
-// }
-
 export interface SearchResult {
   name: { text: string; languageCode: string };
   address: string;
@@ -29,6 +23,13 @@ export interface SearchResult {
   // icon: string | undefined;
   types?: Array<string>;
   rating?: Number;
+  googleMapsLinks: {
+    directionsUri: string;
+    photosUri: string;
+    placeUri: string;
+    reviewsUri: string;
+    writeAReviewUri: string;
+  };
 }
 
 export abstract class AbstractMapApiProvider implements MapApiProvider {

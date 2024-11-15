@@ -29,29 +29,25 @@ const PlaceMarkers: React.FC<PlaceMarkersProps> = ({
   const [selectedPoi, setSelectedPoi] = useState<Location | null>(null);
 
   useEffect(() => {
-    // setSelectedPoi(null);
     setSelectedPoi(selected);
   }, [selected]);
 
-  //   const [visiblePoi, setVisiblePoi] = useState<{
-  //     [key: string]: boolean;
-  //   }>({});
-
-  //   useEffect(() => {
-  //     setVisiblePoi(visibleLocations);
-  //   }, [visibleLocations]);
-
   const openMapsLink = () => {
-    console.log("google maps link");
+    const placeUri = selectedPoi?.googleMapsLinks?.placeUri;
+    if (placeUri) {
+      window.open(placeUri, "_blank")?.focus();
+    } else {
+      console.error("Google Maps link is unavailable.");
+    }
   };
 
   return (
     <>
       {pois
         .filter((location) => visibleLocations[location.name.text])
-        .map((poi: Location, index) => (
+        .map((poi: Location) => (
           <AdvancedMarker
-            key={poi.name.text + index}
+            key={poi.name.text}
             position={poi.location}
             onClick={() => setSelectedPoi(poi)} // Set the selected location
           >
