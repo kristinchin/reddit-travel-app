@@ -1,35 +1,31 @@
 import { useState } from "react";
-// import List from '@mui/material/List';
 import {
-  Card,
   List,
   ListItem,
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Checkbox,
   IconButton,
-  Typography,
-  Button,
-  CardActions,
-  CardContent,
-  CardHeader,
 } from "@mui/material";
-import { LocationOn, LocationOff, Close } from "@mui/icons-material";
+import { LocationOn, LocationOff } from "@mui/icons-material";
 import Location from "../../Location";
 
 interface PlacesListProps {
   locations: Location[];
   onLocationSelect: Function;
+  toggleLocation: Function;
 }
 
 const PlacesList: React.FC<PlacesListProps> = ({
   locations,
   onLocationSelect,
+  toggleLocation,
 }) => {
-  const [checked, setChecked] = useState<string[]>([]);
+  const [checked, setChecked] = useState<string[]>(
+    locations.map((location) => location.name.text),
+  );
 
-  const handleToggle = (value: string) => () => {
+  const handleToggle = (value: string) => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
 
@@ -42,6 +38,7 @@ const PlacesList: React.FC<PlacesListProps> = ({
     console.log("currentIndex: ", currentIndex);
 
     setChecked(newChecked);
+    toggleLocation(value);
   };
 
   const handleListItemClick = (location: Location) => {
@@ -64,34 +61,30 @@ const PlacesList: React.FC<PlacesListProps> = ({
           const labelId = `checkbox-list-label-${location.name.text}`;
 
           return (
-            <ListItem
-              key={location.name.text}
-              secondaryAction={
+            <ListItem key={location.name.text} disablePadding>
+              <ListItemIcon>
                 <IconButton
                   edge="end"
                   aria-label="comments"
-                  // onClick={handleToggle}
+                  onClick={() => handleToggle(location.name.text)}
                 >
-                  <LocationOn />
+                  {checked.includes(location.name.text) ? (
+                    <LocationOff />
+                  ) : (
+                    <LocationOn />
+                  )}
                 </IconButton>
-              }
-              disablePadding
-            >
+              </ListItemIcon>
               <ListItemButton
                 role={undefined}
                 onClick={() => handleListItemClick(location)}
                 dense
               >
-                <ListItemIcon>
-                  <Checkbox
-                    edge="start"
-                    checked={checked.includes(location.name.text)}
-                    tabIndex={-1}
-                    disableRipple
-                    inputProps={{ "aria-labelledby": labelId }}
-                  />
-                </ListItemIcon>
-                <ListItemText id={labelId} primary={location.name.text} />
+                <ListItemText
+                  id={labelId}
+                  primary={location.name.text}
+                  secondary={location.address}
+                />
               </ListItemButton>
             </ListItem>
           );

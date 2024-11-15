@@ -14,6 +14,17 @@ const MapViewer: React.FC = () => {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(
     null,
   );
+  const [visibleLocations, setVisibleLocations] = useState<{
+    [key: string]: boolean;
+  }>({});
+
+  // Toggle visibility of a location
+  const toggleLocation = (locationId: string) => {
+    setVisibleLocations((prev) => ({
+      ...prev,
+      [locationId]: !prev[locationId],
+    }));
+  };
 
   const handleSearch = (value: string) => {
     setInputValue(value); // Update inputValue state
@@ -37,6 +48,15 @@ const MapViewer: React.FC = () => {
           // Update state with fetched locations
           // console.log("locs: ", locs);
           setLocations(locs);
+          setVisibleLocations(
+            locs.reduce(
+              (acc, loc) => {
+                acc[loc.name.text] = true;
+                return acc;
+              },
+              {} as { [key: string]: boolean },
+            ),
+          );
         } catch (error) {
           console.error("Failed to fetch locations:", error);
         }
@@ -51,8 +71,13 @@ const MapViewer: React.FC = () => {
         locations={locations}
         onSearch={handleSearch}
         onSelectedLocation={handleLocationSelect}
+        toggleLocation={toggleLocation}
       />
-      <MapPanel selected={selectedLocation} PoIs={locations} />
+      <MapPanel
+        selected={selectedLocation}
+        PoIs={locations}
+        visibleLocations={visibleLocations}
+      />
     </div>
   );
 };

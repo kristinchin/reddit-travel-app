@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import { Button, TextField, Grid2 } from "@mui/material";
+import { TextField, Grid2, IconButton } from "@mui/material";
 import TestPanel from "./TestPanel";
 import PlacesList from "./PlacesList";
 import Location from "../../Location";
+import { Send } from "@mui/icons-material";
 
 interface SearchPanelProps {
   onSearch: (inputValue: string) => void; // Function to handle search with the input value
   locations: Location[];
   onSelectedLocation: Function;
+  toggleLocation: Function;
 }
 
 const SearchPanel: React.FC<SearchPanelProps> = ({
   onSearch,
   locations,
   onSelectedLocation,
+  toggleLocation,
 }) => {
   var [inputValue, setInputValue] = useState<string>("");
 
@@ -25,19 +28,13 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
   // Handle form submission with Enter key
   const handleKeyPress = (event: React.KeyboardEvent) => {
     if (event.key === "Enter") {
-      inputValue += ".json";
-      onSearch(inputValue);
+      onSearch((inputValue += ".json"));
     }
   };
 
   // Trigger the search function with the current input value
   const handleSearch = () => {
     onSearch(inputValue + ".json");
-  };
-
-  const handleLocationSelect = (location: Location) => {
-    onSelectedLocation(location);
-    console.log("setting selected in SearchPanel");
   };
 
   return (
@@ -56,15 +53,16 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
           />
         </Grid2>
         <Grid2 size={3}>
-          <Button variant="text" onClick={handleSearch}>
-            Search
-          </Button>
+          <IconButton onClick={handleSearch}>
+            <Send></Send>
+          </IconButton>
         </Grid2>
         <Grid2 size={12} direction="column" container spacing={2}>
           <TestPanel onSearch={onSearch}></TestPanel>
           <PlacesList
-            onLocationSelect={handleLocationSelect}
+            onLocationSelect={onSelectedLocation}
             locations={locations}
+            toggleLocation={toggleLocation}
           ></PlacesList>
         </Grid2>
       </Grid2>

@@ -18,9 +18,14 @@ import { Close } from "@mui/icons-material";
 interface PlaceMarkersProps {
   pois: Location[];
   selected: Location | null;
+  visibleLocations: { [key: string]: boolean };
 }
 
-const PlaceMarkers: React.FC<PlaceMarkersProps> = ({ pois, selected }) => {
+const PlaceMarkers: React.FC<PlaceMarkersProps> = ({
+  pois,
+  selected,
+  visibleLocations,
+}) => {
   const [selectedPoi, setSelectedPoi] = useState<Location | null>(null);
 
   useEffect(() => {
@@ -28,9 +33,13 @@ const PlaceMarkers: React.FC<PlaceMarkersProps> = ({ pois, selected }) => {
     setSelectedPoi(selected);
   }, [selected]);
 
-  if (!pois || pois.length === 0) {
-    return null; // or display a message, e.g., <p>No locations available</p>
-  }
+  //   const [visiblePoi, setVisiblePoi] = useState<{
+  //     [key: string]: boolean;
+  //   }>({});
+
+  //   useEffect(() => {
+  //     setVisiblePoi(visibleLocations);
+  //   }, [visibleLocations]);
 
   const openMapsLink = () => {
     console.log("google maps link");
@@ -38,15 +47,21 @@ const PlaceMarkers: React.FC<PlaceMarkersProps> = ({ pois, selected }) => {
 
   return (
     <>
-      {pois.map((poi: Location, index) => (
-        <AdvancedMarker
-          key={poi.name.text + index}
-          position={poi.location}
-          onClick={() => setSelectedPoi(poi)} // Set the selected location
-        >
-          <Pin background={"PURPLE"} glyphColor={"#000"} borderColor={"#000"} />
-        </AdvancedMarker>
-      ))}
+      {pois
+        .filter((location) => visibleLocations[location.name.text])
+        .map((poi: Location, index) => (
+          <AdvancedMarker
+            key={poi.name.text + index}
+            position={poi.location}
+            onClick={() => setSelectedPoi(poi)} // Set the selected location
+          >
+            <Pin
+              background={"PURPLE"}
+              glyphColor={"#000"}
+              borderColor={"#000"}
+            />
+          </AdvancedMarker>
+        ))}
 
       {/* Info window to show location details */}
       {selectedPoi && (
