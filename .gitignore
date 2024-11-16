@@ -3,4 +3,5 @@ dist/
 tsconfig.tsbuildinfo
 .env
 output/
+examples/
 

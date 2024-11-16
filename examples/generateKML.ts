@@ -1,7 +1,7 @@
 import fs from "fs";
 import Location from "../src/Location";
 
-export function generateKML(data: Location[]): string {
+function generateKML(data: Location[]): string {
   data = cleanLocationData(data);
   // console.log("in generate kml");
 
@@ -33,7 +33,7 @@ export function generateKML(data: Location[]): string {
   return `${kmlHeader}${kmlPlacemarks}${kmlFooter}`;
 }
 
-export function downloadKMLBrowser(filename: string, data: Location[]) {
+function downloadKMLBrowser(filename: string, data: Location[]) {
   const kmlContent = generateKML(data);
 
   const blob = new Blob([kmlContent], {

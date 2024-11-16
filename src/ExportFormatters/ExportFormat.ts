@@ -5,7 +5,7 @@ import fs from "fs";
 export interface ExportFormat {
   format(locations: Location[]): string;
   download(filename: string, content: string): void;
-  downloadFromBrowser(filename: string, content: string): void;
+  downloadFromBrowser(filename: string, data: Location[]): void;
 }
 
 export enum ExportFormatType {
@@ -15,16 +15,15 @@ export enum ExportFormatType {
 
 export abstract class AbstractExportFormat implements ExportFormat {
   abstract format(data: Location[]): string;
-  // abstract downloadFromBrowser(filename: string, content: string): void;
 
   download(filename: string, content: string) {
     fs.writeFile(filename, content, (err: NodeJS.ErrnoException | null) => {
-      // In case of a error throw err.
       if (err) throw err;
     });
   }
 
-  downloadFromBrowser(filename: string, content: string) {
+  downloadFromBrowser(filename: string, data: Location[]) {
+    const content = this.format(data);
     const blob = new Blob([content], {
       type: "application/vnd.google-earth.kml+xml",
     });
@@ -54,13 +53,17 @@ export class KMLFormat extends AbstractExportFormat {
     const kmlPlacemarks = data
       .map((location) => {
         return `
-        <Placemark>
-          <name>${location.name.text}</name>
-          <description>Rating: ${location.rating}; Address: ${location.address}; Description: ${location.description} </description>
-          <Point>
-            <coordinates>${location.location.lng},${location.location.lat}</coordinates>
-          </Point>
-        </Placemark>`;
+      <Placemark>
+        <name>${location.name.text}</name>
+        <description><b>Address:</b> ${location.address}
+          <br/><b>Rating:</b> ${location.rating}
+          <br/><b>Description:</b> ${location.description} 
+          <br/><a href="${location.googleMapsLinks?.placeUri}" target="_blank">View In Google Maps</a>
+        </description>
+        <Point>
+          <coordinates>${location.location.lng},${location.location.lat}</coordinates>
+        </Point>
+      </Placemark>`;
       })
       .join("");
 
@@ -102,7 +105,25 @@ export class KMLFormat extends AbstractExportFormat {
 
 export class GeoJSONFormat extends AbstractExportFormat {
   format(data: Location[]): string {
-    return "";
+    const geoJSON = {
+      type: "FeatureCollection",
+      features: data.map((location) => ({
+        type: "Feature",
+        properties: {
+          Name: location.name.text,
+          Address: location.address,
+          Rating: location.rating,
+          Description: location.description,
+          "Google Maps Link": location.googleMapsLinks?.placeUri,
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [location.location.lng, location.location.lat],
+        },
+      })),
+    };
+
+    // Convert GeoJSON object to string
+    return JSON.stringify(geoJSON, null, 2);
   }
-  downloadFromBrowser(filename: string, content: string): void {}
 }

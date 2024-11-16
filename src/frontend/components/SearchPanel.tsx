@@ -3,8 +3,8 @@ import { TextField, Grid2, IconButton, Button } from "@mui/material";
 import TestPanel from "./TestPanel";
 import PlacesList from "./PlacesList";
 import Location from "../../Location";
-import { Send, Download } from "@mui/icons-material";
-import { downloadKMLBrowser } from "../../../examples/generateKML";
+import { Send } from "@mui/icons-material";
+import { ExportPanel } from "./ExportPanel";
 
 interface SearchPanelProps {
   onSearch: (inputValue: string) => void;
@@ -36,10 +36,6 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
   // Trigger the search function with the current input value
   const handleSearch = () => {
     onSearch(inputValue + ".json");
-  };
-
-  const handleKmlDownload = () => {
-    downloadKMLBrowser("kmlFormat.kml", locations);
   };
 
   return (
@@ -76,15 +72,7 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
             toggleLocation={toggleLocation}
           ></PlacesList>
         </Grid2>
-        {locations.length > 0 && (
-          <Button
-            startIcon={<Download />}
-            variant="outlined"
-            onClick={handleKmlDownload}
-          >
-            Export to KML
-          </Button>
-        )}
+        <ExportPanel locations={locations}></ExportPanel>
       </Grid2>
     </div>
   );
