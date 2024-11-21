@@ -110,7 +110,7 @@ const MapPanel: React.FC<MapPanelProps> = ({
   return (
     <div style={{ position: "relative", width: "100%", height: "100%" }}>
       <APIProvider
-        apiKey={import.meta.env.VITE_GOOGLE_API_KEY}
+        apiKey={import.meta.env.VITE_GOOGLE_MAPS_JS_KEY}
         onLoad={() => console.log("Maps API has loaded.")}
       >
         <MapComponent
