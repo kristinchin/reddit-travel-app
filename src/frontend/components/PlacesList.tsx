@@ -54,7 +54,7 @@ const PlacesList: React.FC<PlacesListProps> = ({
           maxWidth: 360,
           bgcolor: "background.paper",
           overflow: "auto",
-          maxHeight: 500,
+          maxHeight: 600,
         }}
       >
         {locations.map((location) => {
@@ -64,7 +64,7 @@ const PlacesList: React.FC<PlacesListProps> = ({
             <ListItem key={location.name.text} disablePadding>
               <ListItemIcon>
                 <IconButton
-                  edge="end"
+                  // edge="end"
                   onClick={() => handleToggle(location.name.text)}
                 >
                   {checked.includes(location.name.text) ? (

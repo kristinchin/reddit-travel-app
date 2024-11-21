@@ -5,6 +5,7 @@ import commonjs from "vite-plugin-commonjs";
 export default defineConfig({
   plugins: [commonjs(), react()],
   server: {
-    port: 3000, // or any port you prefer
+    port: 3000,
   },
+  base: "/reddit-travel-app/",
 });

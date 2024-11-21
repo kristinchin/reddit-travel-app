@@ -6,12 +6,19 @@ import {
   LLMApiProvider,
   LLMProviderType,
 } from "./LLMApiProvider";
-const openai = new OpenAI({
-  apiKey: import.meta.env.VITE_OPENAI_API_KEY,
-  dangerouslyAllowBrowser: true,
-});
 
 export class OpenAIApi implements LLMApiProvider {
+  apiKey: string;
+  openai: OpenAI;
+  constructor(apiKey: string) {
+    this.apiKey = apiKey;
+    this.openai = new OpenAI({
+      // apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+      apiKey: this.apiKey,
+      dangerouslyAllowBrowser: true,
+    });
+  }
+
   provider() {
     return LLMProviderType.OPENAI;
   }
@@ -37,7 +44,7 @@ export class OpenAIApi implements LLMApiProvider {
       // final_answer: z.string(),
     });
 
-    const response = await openai.chat.completions.create({
+    const response = await this.openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }],
       temperature: 0,

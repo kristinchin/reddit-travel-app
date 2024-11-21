@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { Download } from "@mui/icons-material";
-import { getExportFormat } from "../../ExportFormatters/ExportFormatFactory";
-import { ExportFormatType } from "../../ExportFormatters/ExportFormat";
+import { getExportFormat } from "../../services/ExportFormatters/ExportFormatFactory";
+import { ExportFormatType } from "../../services/ExportFormatters/ExportFormat";
 import Location from "../../Location";
 
 const kmlExporter = getExportFormat(ExportFormatType.KML);

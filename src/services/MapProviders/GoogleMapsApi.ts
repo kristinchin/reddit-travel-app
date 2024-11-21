@@ -34,6 +34,11 @@ interface GoogleMapsPlace {
 
 // this class is for browser use, does not implement caching
 export class GoogleMapsBrowserApi extends AbstractMapApiProvider {
+  apiKey;
+  constructor(apiKey: string) {
+    super();
+    this.apiKey = apiKey;
+  }
   provider(): MapProviderType {
     return MapProviderType.GOOGLE_BROWSER;
   }
@@ -52,7 +57,7 @@ export class GoogleMapsBrowserApi extends AbstractMapApiProvider {
   }
 
   async apiTextSearch(query: Query): Promise<GoogleMapsPlace | undefined> {
-    const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
+    // const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
     const textQuery = query.queryString;
 
     try {
@@ -62,7 +67,7 @@ export class GoogleMapsBrowserApi extends AbstractMapApiProvider {
         {
           headers: {
             "Content-Type": "application/json",
-            "X-Goog-Api-Key": apiKey || "", // Fallback to empty string if apiKey is undefined
+            "X-Goog-Api-Key": this.apiKey || "", // Fallback to empty string if apiKey is undefined
             "X-Goog-FieldMask":
               "places.displayName,places.formattedAddress,places.location,places.types,places.rating,places.googleMapsLinks",
           },

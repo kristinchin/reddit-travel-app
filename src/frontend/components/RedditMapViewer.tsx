@@ -2,7 +2,11 @@ import "../App.css";
 import { useEffect, useState } from "react";
 import Location from "../../Location";
 import MapPanel from "./MapPanel";
-import { MapProviderType } from "../../MapProviders/MapApiProvider";
+import { MapProviderType } from "../../services/MapProviders/MapApiProvider";
+import {
+  LLMApiProvider,
+  LLMProviderType,
+} from "../../services/LLMProviders/LLMApiProvider";
 import SearchPanel from "./SearchPanel";
 import { threadToLocations } from "../../redditToMapData";
 
@@ -15,6 +19,8 @@ const MapViewer: React.FC = () => {
   const [visibleLocations, setVisibleLocations] = useState<{
     [key: string]: boolean;
   }>({});
+  const [googleApiKey, setGoogleApiKey] = useState("");
+  const [openAIApiKey, setOpenAIApiKey] = useState("");
 
   // Toggle visibility of a location
   const toggleLocation = (locationId: string) => {
@@ -33,6 +39,18 @@ const MapViewer: React.FC = () => {
     console.log("setting selected in map viewer to: ", location.name.text);
   };
 
+  const handleGoogleKey = (apiKey: string | undefined) => {
+    if (apiKey) {
+      setGoogleApiKey(apiKey);
+    }
+  };
+
+  const handleOpenAIKey = (apiKey: string | undefined) => {
+    if (apiKey) {
+      setOpenAIApiKey(apiKey);
+    }
+  };
+
   useEffect(() => {
     // Trigger location update only when inputValue changes
     const fetchLocations = async () => {
@@ -42,6 +60,9 @@ const MapViewer: React.FC = () => {
           const locs = await threadToLocations(
             inputValue,
             MapProviderType.GOOGLE_BROWSER,
+            LLMProviderType.OPENAI,
+            googleApiKey,
+            openAIApiKey,
           );
           // Update state with fetched locations
           // console.log("locs: ", locs);
@@ -75,6 +96,8 @@ const MapViewer: React.FC = () => {
         selected={selectedLocation}
         PoIs={locations}
         visibleLocations={visibleLocations}
+        handleOpenAIKey={handleOpenAIKey}
+        handleGoogleKey={handleGoogleKey}
       />
     </div>
   );

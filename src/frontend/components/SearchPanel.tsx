@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Grid2, IconButton, Button } from "@mui/material";
+import { TextField, Grid2, IconButton } from "@mui/material";
 import TestPanel from "./TestPanel";
 import PlacesList from "./PlacesList";
 import Location from "../../Location";
@@ -47,7 +47,7 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
         alignItems="center"
         spacing={2}
       >
-        <Grid2 size={9}>
+        <Grid2 size={10}>
           <TextField
             id="standard-basic"
             label="Find your next destination"
@@ -59,7 +59,7 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
             placeholder="Paste a reddit thread..."
           />
         </Grid2>
-        <Grid2 size={3}>
+        <Grid2 size={2}>
           <IconButton onClick={handleSearch}>
             <Send></Send>
           </IconButton>
@@ -72,7 +72,7 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
             toggleLocation={toggleLocation}
           ></PlacesList>
         </Grid2>
-        <ExportPanel locations={locations}></ExportPanel>
+        <ExportPanel locations={locations} />
       </Grid2>
     </div>
   );

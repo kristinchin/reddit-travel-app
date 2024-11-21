@@ -1,4 +1,4 @@
-import Location from "../Location";
+import Location from "../../Location";
 import fs from "fs";
 
 // interface for exporting the location data to geospatial format

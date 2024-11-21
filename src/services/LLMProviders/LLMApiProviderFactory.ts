@@ -3,10 +3,10 @@ import { LLMApiProvider, LLMProviderType } from "./LLMApiProvider";
 
 export function getLLMProvider(
   provider: LLMProviderType,
-  // cacheFile: string,
+  apiKey: string,
 ): LLMApiProvider {
   switch (provider) {
     case LLMProviderType.OPENAI:
-      return new OpenAIApi();
+      return new OpenAIApi(apiKey);
   }
 }
