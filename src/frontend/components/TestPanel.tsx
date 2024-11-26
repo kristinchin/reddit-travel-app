@@ -1,4 +1,4 @@
-import { Button, Grid2, Grid } from "@mui/material";
+import { Button, Grid2, Fab } from "@mui/material";
 
 interface TestPanelProps {
   onSearch: (inputValue: string) => void; // Function to handle search with the input value
@@ -27,6 +27,11 @@ const TestPanel: React.FC<TestPanelProps> = ({ onSearch }) => {
     <div>
       <Grid2 container direction="column" spacing={2}>
         {/* <Grid2> */}
+        <Button variant="contained" onClick={handleSearch3}>
+          Denver Small
+        </Button>
+        {/* </Grid2>
+        <Grid2> */}
         <Button variant="contained" onClick={handleSearch1}>
           Denver Large
         </Button>
@@ -34,11 +39,6 @@ const TestPanel: React.FC<TestPanelProps> = ({ onSearch }) => {
         <Grid2> */}
         <Button variant="contained" onClick={handleSearch2}>
           Bozeman Med
-        </Button>
-        {/* </Grid2>
-        <Grid2> */}
-        <Button variant="contained" onClick={handleSearch3}>
-          Denver Small
         </Button>
         {/* </Grid2> */}
       </Grid2>

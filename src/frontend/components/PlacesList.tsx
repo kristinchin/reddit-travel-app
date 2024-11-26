@@ -54,7 +54,7 @@ const PlacesList: React.FC<PlacesListProps> = ({
           maxWidth: 360,
           bgcolor: "background.paper",
           overflow: "auto",
-          maxHeight: 600,
+          maxHeight: 450,
         }}
       >
         {locations.map((location) => {

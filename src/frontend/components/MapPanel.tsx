@@ -7,16 +7,9 @@ import {
 import Location from "../../Location";
 import { useEffect, useState } from "react";
 import PlaceMarkers from "./PlaceMarkers";
-import {
-  Box,
-  Button,
-  Drawer,
-  Fab,
-  List,
-  ListItem,
-  TextField,
-} from "@mui/material";
+import { Fab } from "@mui/material";
 import { Settings } from "@mui/icons-material";
+import SettingsPanel from "./SettingsPanel";
 
 interface MapComponentProps {
   PoIs: Location[]; // Function to handle search with the input value
@@ -93,24 +86,13 @@ const MapPanel: React.FC<MapPanelProps> = ({
   handleGoogleKey,
 }) => {
   const [open, setOpen] = useState(false);
-  const [openAiKey, setOpenAiKey] = useState("");
-  const [googleApiKey, setGoogleApiKey] = useState("");
-
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
-  const handleSave = () => {
-    console.log("OpenAI API Key:", openAiKey);
-    console.log("Google API Key:", googleApiKey);
-    handleOpenAIKey(openAiKey);
-    handleGoogleKey(googleApiKey);
-    handleClose();
-  };
 
   return (
     <div style={{ position: "relative", width: "100%", height: "100%" }}>
       <APIProvider
-        apiKey={import.meta.env.VITE_GOOGLE_MAPS_JS_KEY}
+        apiKey={import.meta.env.VITE_GOOGLE_API_KEY}
         onLoad={() => console.log("Maps API has loaded.")}
       >
         <MapComponent
@@ -133,50 +115,12 @@ const MapPanel: React.FC<MapPanelProps> = ({
           </Fab>
         </div>
       </APIProvider>
-      <Drawer
+      <SettingsPanel
+        handleOpenAIKey={handleOpenAIKey}
+        handleGoogleKey={handleGoogleKey}
         open={open}
-        onClose={handleClose}
-        anchor="right"
-        aria-labelledby="api-keys-modal-title"
-        aria-describedby="api-keys-modal-description"
-      >
-        <Box sx={{ padding: 1, width: 300 }}>
-          <h3>Enter API Keys</h3>
-          <List>
-            <ListItem>
-              <TextField
-                fullWidth
-                label="OpenAI API Key"
-                value={openAiKey}
-                onChange={(e) => setOpenAiKey(e.target.value)}
-              />
-            </ListItem>
-            <ListItem>
-              <TextField
-                fullWidth
-                label="Google API Key"
-                value={googleApiKey}
-                onChange={(e) => {
-                  setGoogleApiKey(e.target.value);
-                  console.log("setting google key to: ", e.target.value);
-                }}
-              />
-            </ListItem>
-            <ListItem sx={{ display: "flex", justifyContent: "flex-end" }}>
-              <Button
-                onClick={handleClose}
-                color="secondary"
-                sx={{ marginRight: 1 }}
-              >
-                Cancel
-              </Button>
-              <Button onClick={handleSave} variant="contained" color="primary">
-                Save
-              </Button>
-            </ListItem>
-          </List>
-        </Box>
-      </Drawer>
+        handleClose={handleClose}
+      ></SettingsPanel>
     </div>
   );
 };
