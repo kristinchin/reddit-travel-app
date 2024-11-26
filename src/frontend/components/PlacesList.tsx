@@ -21,23 +21,21 @@ const PlacesList: React.FC<PlacesListProps> = ({
   onLocationSelect,
   toggleLocation,
 }) => {
-  const [checked, setChecked] = useState<string[]>(
-    locations.map((location) => location.name.text),
-  );
+  const [hidden, setHidden] = useState<string[]>([]);
 
   const handleToggle = (value: string) => {
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
+    const currentIndex = hidden.indexOf(value);
+    const newHidden = [...hidden];
 
     if (currentIndex === -1) {
-      newChecked.push(value);
+      newHidden.push(value);
     } else {
-      newChecked.splice(currentIndex, 1);
+      newHidden.splice(currentIndex, 1);
     }
     // console.log("newChecked: ", newChecked);
     // console.log("currentIndex: ", currentIndex);
 
-    setChecked(newChecked);
+    setHidden(newHidden);
     toggleLocation(value);
   };
 
@@ -63,7 +61,7 @@ const PlacesList: React.FC<PlacesListProps> = ({
             <ListItem key={location.name.text} disablePadding>
               <ListItemIcon>
                 <IconButton onClick={() => handleToggle(location.name.text)}>
-                  {checked.includes(location.name.text) ? (
+                  {hidden.includes(location.name.text) ? (
                     <LocationOff />
                   ) : (
                     <LocationOn />
