@@ -1,14 +1,15 @@
 import "../App.css";
 import { useEffect, useState } from "react";
 import Location from "../../Location";
-import MapPanel from "./MapPanel";
+import GoogleMapPanel from "./MapPanel";
 import { MapProviderType } from "../../services/MapProviders/MapApiProvider";
-import {
-  LLMApiProvider,
-  LLMProviderType,
-} from "../../services/LLMProviders/LLMApiProvider";
+import { LLMProviderType } from "../../services/LLMProviders/LLMApiProvider";
 import SearchPanel from "./SearchPanel";
 import { threadToLocations } from "../../redditToMapData";
+import SettingsPanel from "./SettingsPanel";
+import { Fab } from "@mui/material";
+import { Settings } from "@mui/icons-material";
+import ApiKeyForm from "./CredentialsPage";
 
 const MapViewer: React.FC = () => {
   const [locations, setLocations] = useState<Location[]>([]);
@@ -21,6 +22,9 @@ const MapViewer: React.FC = () => {
   }>({});
   const [googleApiKey, setGoogleApiKey] = useState("");
   const [openAIApiKey, setOpenAIApiKey] = useState("");
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   // Toggle visibility of a location
   const toggleLocation = (locationId: string) => {
@@ -42,12 +46,14 @@ const MapViewer: React.FC = () => {
   const handleGoogleKey = (apiKey: string | undefined) => {
     if (apiKey) {
       setGoogleApiKey(apiKey);
+      console.log("setting google key: ", apiKey);
     }
   };
 
   const handleOpenAIKey = (apiKey: string | undefined) => {
     if (apiKey) {
       setOpenAIApiKey(apiKey);
+      console.log("setting openAI key: ", apiKey);
     }
   };
 
@@ -92,13 +98,44 @@ const MapViewer: React.FC = () => {
         onSelectedLocation={handleLocationSelect}
         toggleLocation={toggleLocation}
       />
-      <MapPanel
-        selected={selectedLocation}
-        PoIs={locations}
-        visibleLocations={visibleLocations}
-        handleOpenAIKey={handleOpenAIKey}
-        handleGoogleKey={handleGoogleKey}
-      />
+      {googleApiKey == "" && openAIApiKey == "" && (
+        <ApiKeyForm
+          handleOpenAIKey={handleOpenAIKey}
+          handleGoogleKey={handleGoogleKey}
+          open={true}
+        ></ApiKeyForm>
+      )}
+      <div style={{ position: "relative", width: "100%", height: "100%" }}>
+        {googleApiKey && (
+          <GoogleMapPanel
+            selected={selectedLocation}
+            PoIs={locations}
+            visibleLocations={visibleLocations}
+            handleOpenAIKey={handleOpenAIKey}
+            handleGoogleKey={handleGoogleKey}
+            googleApiKey={googleApiKey}
+          />
+        )}
+        {/* Overlay button */}
+        <div
+          style={{
+            position: "absolute",
+            top: "10px", // Adjust as needed
+            right: "60px", // Adjust as needed
+            zIndex: 1000, // Ensure it's above the map
+          }}
+        >
+          <Fab size="small" onClick={handleOpen}>
+            <Settings />
+          </Fab>
+        </div>
+        <SettingsPanel
+          handleOpenAIKey={handleOpenAIKey}
+          handleGoogleKey={handleGoogleKey}
+          open={open}
+          handleClose={handleClose}
+        ></SettingsPanel>
+      </div>
     </div>
   );
 };

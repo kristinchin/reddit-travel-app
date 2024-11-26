@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Drawer,
-  Fab,
-  List,
-  ListItem,
-  TextField,
-} from "@mui/material";
+import { Box, Button, Drawer, List, ListItem, TextField } from "@mui/material";
 import { useState } from "react";
 
 interface SettingsPanelProps {

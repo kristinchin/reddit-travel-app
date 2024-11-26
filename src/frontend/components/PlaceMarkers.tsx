@@ -11,7 +11,6 @@ import {
   CardHeader,
   Button,
   Rating,
-  Grid2,
 } from "@mui/material";
 import { Close } from "@mui/icons-material";
 

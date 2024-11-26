@@ -7,9 +7,6 @@ import {
 import Location from "../../Location";
 import { useEffect, useState } from "react";
 import PlaceMarkers from "./PlaceMarkers";
-import { Fab } from "@mui/material";
-import { Settings } from "@mui/icons-material";
-import SettingsPanel from "./SettingsPanel";
 
 interface MapComponentProps {
   PoIs: Location[]; // Function to handle search with the input value
@@ -23,9 +20,10 @@ interface MapPanelProps {
   visibleLocations: { [key: string]: boolean };
   handleOpenAIKey: Function;
   handleGoogleKey: Function;
+  googleApiKey: string;
 }
 
-const MapComponent: React.FC<MapComponentProps> = ({
+const GoogleMapComponent: React.FC<MapComponentProps> = ({
   PoIs,
   selected,
   visibleLocations,
@@ -78,51 +76,24 @@ const MapComponent: React.FC<MapComponentProps> = ({
   );
 };
 
-const MapPanel: React.FC<MapPanelProps> = ({
+const GoogleMapPanel: React.FC<MapPanelProps> = ({
   PoIs,
   selected,
   visibleLocations,
-  handleOpenAIKey,
-  handleGoogleKey,
+  googleApiKey,
 }) => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
   return (
-    <div style={{ position: "relative", width: "100%", height: "100%" }}>
-      <APIProvider
-        apiKey={import.meta.env.VITE_GOOGLE_API_KEY}
-        onLoad={() => console.log("Maps API has loaded.")}
-      >
-        <MapComponent
-          selected={selected}
-          PoIs={PoIs}
-          visibleLocations={visibleLocations}
-        ></MapComponent>
-
-        {/* Overlay button */}
-        <div
-          style={{
-            position: "absolute",
-            top: "10px", // Adjust as needed
-            right: "60px", // Adjust as needed
-            zIndex: 1000, // Ensure it's above the map
-          }}
-        >
-          <Fab size="small" onClick={handleOpen}>
-            <Settings />
-          </Fab>
-        </div>
-      </APIProvider>
-      <SettingsPanel
-        handleOpenAIKey={handleOpenAIKey}
-        handleGoogleKey={handleGoogleKey}
-        open={open}
-        handleClose={handleClose}
-      ></SettingsPanel>
-    </div>
+    <APIProvider
+      apiKey={googleApiKey}
+      onLoad={() => console.log("Maps API has loaded.")}
+    >
+      <GoogleMapComponent
+        selected={selected}
+        PoIs={PoIs}
+        visibleLocations={visibleLocations}
+      ></GoogleMapComponent>
+    </APIProvider>
   );
 };
 
-export default MapPanel;
+export default GoogleMapPanel;

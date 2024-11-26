@@ -65,12 +65,14 @@ const SearchPanel: React.FC<SearchPanelProps> = ({
           </IconButton>
         </Grid2>
         <Grid2 size={12} direction="column" container spacing={2}>
-          <TestPanel onSearch={onSearch}></TestPanel>
-          <PlacesList
-            onLocationSelect={onSelectedLocation}
-            locations={locations}
-            toggleLocation={toggleLocation}
-          ></PlacesList>
+          {/* <TestPanel onSearch={onSearch}></TestPanel> */}
+          {locations.length > 0 && (
+            <PlacesList
+              onLocationSelect={onSelectedLocation}
+              locations={locations}
+              toggleLocation={toggleLocation}
+            ></PlacesList>
+          )}
         </Grid2>
         <ExportPanel locations={locations} />
       </Grid2>

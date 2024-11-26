@@ -34,8 +34,8 @@ const PlacesList: React.FC<PlacesListProps> = ({
     } else {
       newChecked.splice(currentIndex, 1);
     }
-    console.log("newChecked: ", newChecked);
-    console.log("currentIndex: ", currentIndex);
+    // console.log("newChecked: ", newChecked);
+    // console.log("currentIndex: ", currentIndex);
 
     setChecked(newChecked);
     toggleLocation(value);
@@ -43,7 +43,6 @@ const PlacesList: React.FC<PlacesListProps> = ({
 
   const handleListItemClick = (location: Location) => {
     onLocationSelect(location);
-    console.log("item selected in PlacesList");
   };
 
   return (
@@ -52,7 +51,7 @@ const PlacesList: React.FC<PlacesListProps> = ({
         sx={{
           width: "100%",
           maxWidth: 360,
-          bgcolor: "background.paper",
+          bgcolor: "#333",
           overflow: "auto",
           maxHeight: 450,
         }}
@@ -63,10 +62,7 @@ const PlacesList: React.FC<PlacesListProps> = ({
           return (
             <ListItem key={location.name.text} disablePadding>
               <ListItemIcon>
-                <IconButton
-                  // edge="end"
-                  onClick={() => handleToggle(location.name.text)}
-                >
+                <IconButton onClick={() => handleToggle(location.name.text)}>
                   {checked.includes(location.name.text) ? (
                     <LocationOff />
                   ) : (
